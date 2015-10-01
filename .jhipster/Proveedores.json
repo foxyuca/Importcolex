@@ -1,0 +1,70 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ordencompra",
+            "otherEntityName": "ordenCompra",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "proveedores"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "150"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "identificacion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "450"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "telefono",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMaxlength": "45",
+            "fieldValidateRulesPattern": "(^[0-9]+$)",
+            "fieldValidateRulesPatternJava": "(^[0-9]+$)"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMaxlength": "200",
+            "fieldValidateRulesPattern": "^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](\\.?[-!#$%&'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\\.[a-zA-Z](-?[a-zA-Z0-9])*)+$",
+            "fieldValidateRulesPatternJava": "^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](\\\\.?[-!#$%&'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\\\\.[a-zA-Z](-?[a-zA-Z0-9])*)+$"
+        }
+    ],
+    "changelogDate": "20151001203017",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="importcolexApp.maquina.detail.title">Maquina</span> {{maquina.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.maquina.marca">Marca</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{maquina.marca}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.maquina.galga">Galga</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{maquina.galga}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.maquina.diametro">Diametro</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{maquina.diametro}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.maquina.rpm">Rpm</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{maquina.rpm}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.maquina.agujas">Agujas</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{maquina.agujas}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

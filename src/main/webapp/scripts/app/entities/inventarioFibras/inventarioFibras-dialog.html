@@ -1,0 +1,96 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myInventarioFibrasLabel" translate="importcolexApp.inventarioFibras.home.createOrEditLabel">Create or edit a InventarioFibras</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="inventarioFibras.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.lote" for="field_lote">Lote</label>
+            <input type="text" class="form-control" name="lote" id="field_lote"
+                    ng-model="inventarioFibras.lote"
+                    required ng-maxlength="50">
+            <div ng-show="editForm.lote.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lote.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.lote.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.inventarioInicial" for="field_inventarioInicial">InventarioInicial</label>
+            <input type="number" class="form-control" name="inventarioInicial" id="field_inventarioInicial"
+                    ng-model="inventarioFibras.inventarioInicial"
+                    required>
+            <div ng-show="editForm.inventarioInicial.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.inventarioInicial.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.inventarioInicial.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.inventarioFinal" for="field_inventarioFinal">InventarioFinal</label>
+            <input type="number" class="form-control" name="inventarioFinal" id="field_inventarioFinal"
+                    ng-model="inventarioFibras.inventarioFinal"
+                    required>
+            <div ng-show="editForm.inventarioFinal.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.inventarioFinal.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.inventarioFinal.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.costo" for="field_costo">Costo</label>
+            <input type="number" class="form-control" name="costo" id="field_costo"
+                    ng-model="inventarioFibras.costo"
+                    required>
+            <div ng-show="editForm.costo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.fibras" for="field_fibras">fibras</label>
+            <select class="form-control" id="field_fibras" name="fibras" ng-model="inventarioFibras.fibrasId" ng-options="fibras.id as fibras.nombre for fibras in fibrass">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

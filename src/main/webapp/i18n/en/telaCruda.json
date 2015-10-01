@@ -1,0 +1,36 @@
+{
+    "importcolexApp": {
+        "telaCruda" : {
+            "home": {
+                "title": "TelaCrudas",
+                "createLabel": "Create a new TelaCruda",
+                "createOrEditLabel": "Create or edit a TelaCruda"
+            },
+            "created": "A new TelaCruda is created with identifier {{ param }}",
+            "updated": "A TelaCruda is updated with identifier {{ param }}",
+            "deleted": "A TelaCruda is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete TelaCruda {{ id }}?"
+            },
+            "detail": {
+                "title": "TelaCruda"
+            },
+            "peso": "Peso",
+            "ancho": "Ancho",
+            "costo": "Costo",
+            "fechaProduccion": "FechaProduccion",
+            "horaInicial": "HoraInicial",
+            "horaFinal": "HoraFinal",
+            "turno": "Turno",
+            "gramaje": "Gramaje",
+            "inicioParoMecanico": "InicioParoMecanico",
+            "finParoMecanico": "FinParoMecanico",
+            "motivoParoMecanico": "MotivoParoMecanico",
+            "fibrasTelaCruda": "FibrasTelaCruda",
+            "tipoTela": "TipoTela",
+            "maquina": "Maquina",
+            "operario": "Operario",
+            "clientes": "Clientes"
+        }
+    }
+}

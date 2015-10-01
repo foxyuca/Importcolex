@@ -1,0 +1,56 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "proveedores",
+            "otherEntityName": "proveedores",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "fibras",
+            "otherEntityName": "fibras",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "ticket",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "costo",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "aprovada",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "ordenada",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "recibida",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20151001204009",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

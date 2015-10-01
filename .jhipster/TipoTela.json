@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "direccionamientoTela",
+            "otherEntityName": "direccionamientoTela",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "telaCruda",
+            "otherEntityName": "telaCruda",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "tipoTela"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        }
+    ],
+    "changelogDate": "20151001214008",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

@@ -1,0 +1,20 @@
+{
+    "importcolexApp": {
+        "direccionamientoTela" : {
+            "home": {
+                "title": "DireccionamientoTelas",
+                "createLabel": "Créer un nouveau DireccionamientoTela",
+                "createOrEditLabel": "Créer ou éditer un DireccionamientoTela"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le DireccionamientoTela {{ id }} ?"
+            },
+            "detail": {
+                "title": "DireccionamientoTela"
+            },
+            "nombre": "Nombre",
+            "tipoTela": "TipoTela"
+        }
+    }
+}
+

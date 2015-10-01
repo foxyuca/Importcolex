@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="importcolexApp.fibrasTelaCruda.detail.title">FibrasTelaCruda</span> {{fibrasTelaCruda.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.fibrasTelaCruda.referencia">Referencia</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fibrasTelaCruda.referencia}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.fibrasTelaCruda.peso">Peso</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fibrasTelaCruda.peso}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.fibrasTelaCruda.inventarioFibras">inventarioFibras</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="inventarioFibras.detail({id:fibrasTelaCruda.inventarioFibrasId})">{{fibrasTelaCruda.inventarioFibrasLote}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.fibrasTelaCruda.telaCruda">telaCruda</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="telaCruda.detail({id:fibrasTelaCruda.telaCrudaId})">{{fibrasTelaCruda.telaCrudaId}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

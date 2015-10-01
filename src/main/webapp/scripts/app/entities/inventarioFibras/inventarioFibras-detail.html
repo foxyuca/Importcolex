@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="importcolexApp.inventarioFibras.detail.title">InventarioFibras</span> {{inventarioFibras.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.inventarioFibras.lote">Lote</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{inventarioFibras.lote}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.inventarioFibras.inventarioInicial">InventarioInicial</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{inventarioFibras.inventarioInicial}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.inventarioFibras.inventarioFinal">InventarioFinal</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{inventarioFibras.inventarioFinal}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.inventarioFibras.costo">Costo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{inventarioFibras.costo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.inventarioFibras.fibras">fibras</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="fibras.detail({id:inventarioFibras.fibrasId})">{{inventarioFibras.fibrasNombre}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

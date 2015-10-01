@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="importcolexApp.ordenCompra.detail.title">OrdenCompra</span> {{ordenCompra.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.ticket">Ticket</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.ticket}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.cantidad">Cantidad</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.cantidad}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.costo">Costo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.costo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.aprovada">Aprovada</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.aprovada}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.ordenada">Ordenada</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.ordenada}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.recibida">Recibida</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ordenCompra.recibida}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.proveedores">proveedores</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="proveedores.detail({id:ordenCompra.proveedoresId})">{{ordenCompra.proveedoresNombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.ordenCompra.fibras">fibras</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="fibras.detail({id:ordenCompra.fibrasId})">{{ordenCompra.fibrasNombre}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

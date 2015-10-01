@@ -1,0 +1,34 @@
+{
+    "importcolexApp": {
+        "telaCruda" : {
+            "home": {
+                "title": "TelaCrudas",
+                "createLabel": "Créer un nouveau TelaCruda",
+                "createOrEditLabel": "Créer ou éditer un TelaCruda"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TelaCruda {{ id }} ?"
+            },
+            "detail": {
+                "title": "TelaCruda"
+            },
+            "peso": "Peso",
+            "ancho": "Ancho",
+            "costo": "Costo",
+            "fechaProduccion": "FechaProduccion",
+            "horaInicial": "HoraInicial",
+            "horaFinal": "HoraFinal",
+            "turno": "Turno",
+            "gramaje": "Gramaje",
+            "inicioParoMecanico": "InicioParoMecanico",
+            "finParoMecanico": "FinParoMecanico",
+            "motivoParoMecanico": "MotivoParoMecanico",
+            "fibrasTelaCruda": "FibrasTelaCruda",
+            "tipoTela": "TipoTela",
+            "maquina": "Maquina",
+            "operario": "Operario",
+            "clientes": "Clientes"
+        }
+    }
+}
+

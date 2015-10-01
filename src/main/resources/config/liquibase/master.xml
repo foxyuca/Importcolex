@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001200757_added_entity_Fibras.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001203017_added_entity_Proveedores.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001203257_added_entity_TipoIdentificacion.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001204009_added_entity_OrdenCompra.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001205333_added_entity_InventarioFibras.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001211415_added_entity_DireccionamientoTela.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001214008_added_entity_TipoTela.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001214518_added_entity_Maquina.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001215020_added_entity_Operario.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001215931_added_entity_Clientes.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001222326_added_entity_TelaCruda.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151001222802_added_entity_FibrasTelaCruda.xml" relativeToChangelogFile="false"/>
+    <!-- JHipster will add liquibase changelogs here -->
+</databaseChangeLog>

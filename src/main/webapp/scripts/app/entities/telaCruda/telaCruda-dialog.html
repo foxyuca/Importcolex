@@ -1,0 +1,196 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTelaCrudaLabel" translate="importcolexApp.telaCruda.home.createOrEditLabel">Create or edit a TelaCruda</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="telaCruda.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.peso" for="field_peso">Peso</label>
+            <input type="number" class="form-control" name="peso" id="field_peso"
+                    ng-model="telaCruda.peso"
+                    required>
+            <div ng-show="editForm.peso.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.peso.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.peso.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.ancho" for="field_ancho">Ancho</label>
+            <input type="number" class="form-control" name="ancho" id="field_ancho"
+                    ng-model="telaCruda.ancho"
+                    required>
+            <div ng-show="editForm.ancho.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.ancho.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.ancho.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.costo" for="field_costo">Costo</label>
+            <input type="number" class="form-control" name="costo" id="field_costo"
+                    ng-model="telaCruda.costo"
+                    required>
+            <div ng-show="editForm.costo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.fechaProduccion" for="field_fechaProduccion">FechaProduccion</label>
+            <input type="datetime-local" class="form-control" name="fechaProduccion" id="field_fechaProduccion"
+                    ng-model="telaCruda.fechaProduccion" ng-model-options="{timezone: 'UTC'}"
+                    required>
+            <div ng-show="editForm.fechaProduccion.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.fechaProduccion.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fechaProduccion.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.horaInicial" for="field_horaInicial">HoraInicial</label>
+            <input type="datetime-local" class="form-control" name="horaInicial" id="field_horaInicial"
+                    ng-model="telaCruda.horaInicial" ng-model-options="{timezone: 'UTC'}"
+                    required>
+            <div ng-show="editForm.horaInicial.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.horaInicial.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.horaInicial.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.horaFinal" for="field_horaFinal">HoraFinal</label>
+            <input type="datetime-local" class="form-control" name="horaFinal" id="field_horaFinal"
+                    ng-model="telaCruda.horaFinal" ng-model-options="{timezone: 'UTC'}"
+                    required>
+            <div ng-show="editForm.horaFinal.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.horaFinal.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.horaFinal.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.turno" for="field_turno">Turno</label>
+            <input type="text" class="form-control" name="turno" id="field_turno"
+                    ng-model="telaCruda.turno"
+                    required ng-maxlength="45">
+            <div ng-show="editForm.turno.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.turno.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.turno.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="45">
+                    This field cannot be longer than 45 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.gramaje" for="field_gramaje">Gramaje</label>
+            <input type="number" class="form-control" name="gramaje" id="field_gramaje"
+                    ng-model="telaCruda.gramaje"
+                    required>
+            <div ng-show="editForm.gramaje.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.gramaje.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.gramaje.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.inicioParoMecanico" for="field_inicioParoMecanico">InicioParoMecanico</label>
+            <input type="datetime-local" class="form-control" name="inicioParoMecanico" id="field_inicioParoMecanico"
+                    ng-model="telaCruda.inicioParoMecanico" ng-model-options="{timezone: 'UTC'}"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.finParoMecanico" for="field_finParoMecanico">FinParoMecanico</label>
+            <input type="datetime-local" class="form-control" name="finParoMecanico" id="field_finParoMecanico"
+                    ng-model="telaCruda.finParoMecanico" ng-model-options="{timezone: 'UTC'}"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.motivoParoMecanico" for="field_motivoParoMecanico">MotivoParoMecanico</label>
+            <input type="text" class="form-control" name="motivoParoMecanico" id="field_motivoParoMecanico"
+                    ng-model="telaCruda.motivoParoMecanico"
+                    >
+        </div>
+
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.tipoTela" for="field_tipoTela">tipoTela</label>
+            <select class="form-control" id="field_tipoTela" name="tipoTela" ng-model="telaCruda.tipoTelaId" ng-options="tipoTela.id as tipoTela.nombre for tipoTela in tipotelas">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.maquina" for="field_maquina">maquina</label>
+            <select class="form-control" id="field_maquina" name="maquina" ng-model="telaCruda.maquinaId" ng-options="maquina.id as maquina.id for maquina in maquinas">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.operario" for="field_operario">operario</label>
+            <select class="form-control" id="field_operario" name="operario" ng-model="telaCruda.operarioId" ng-options="operario.id as operario.nombre for operario in operarios">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.telaCruda.clientes" for="field_clientes">clientes</label>
+            <select class="form-control" id="field_clientes" name="clientes" ng-model="telaCruda.clientesId" ng-options="clientes.id as clientes.nombre for clientes in clientess">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

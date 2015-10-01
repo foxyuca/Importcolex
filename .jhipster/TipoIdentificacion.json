@@ -1,0 +1,26 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "proveedores",
+            "otherEntityName": "proveedores",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "tipoIdentificacion"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "10"
+        }
+    ],
+    "changelogDate": "20151001203257",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

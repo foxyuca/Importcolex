@@ -1,0 +1,126 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "fibrasTelaCruda",
+            "otherEntityName": "fibrasTelaCruda",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "telaCruda"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "tipoTela",
+            "otherEntityName": "tipoTela",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "maquina",
+            "otherEntityName": "maquina",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "operario",
+            "otherEntityName": "operario",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "clientes",
+            "otherEntityName": "clientes",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "peso",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "ancho",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "costo",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "fechaProduccion",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "horaInicial",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "horaFinal",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "turno",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "45"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "gramaje",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "inicioParoMecanico",
+            "fieldType": "DateTime"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "finParoMecanico",
+            "fieldType": "DateTime"
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "motivoParoMecanico",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20151001222326",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

@@ -1,0 +1,22 @@
+{
+    "importcolexApp": {
+        "operario" : {
+            "home": {
+                "title": "Operarios",
+                "createLabel": "Créer un nouveau Operario",
+                "createOrEditLabel": "Créer ou éditer un Operario"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Operario {{ id }} ?"
+            },
+            "detail": {
+                "title": "Operario"
+            },
+            "nombre": "Nombre",
+            "turno": "Turno",
+            "referencia": "Referencia",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}
+

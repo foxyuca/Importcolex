@@ -1,0 +1,117 @@
+<div>
+    <h2 translate="importcolexApp.telaCruda.home.title">TelaCrudas</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="telaCruda.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="importcolexApp.telaCruda.home.createLabel">Create a new TelaCruda</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteTelaCrudaConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(telaCruda.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="importcolexApp.telaCruda.delete.question" translate-values="{id: '{{telaCruda.id}}'}">Are you sure you want to delete this TelaCruda?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="importcolexApp.telaCruda.peso">Peso</th>
+                    <th translate="importcolexApp.telaCruda.ancho">Ancho</th>
+                    <th translate="importcolexApp.telaCruda.costo">Costo</th>
+                    <th translate="importcolexApp.telaCruda.fechaProduccion">FechaProduccion</th>
+                    <th translate="importcolexApp.telaCruda.horaInicial">HoraInicial</th>
+                    <th translate="importcolexApp.telaCruda.horaFinal">HoraFinal</th>
+                    <th translate="importcolexApp.telaCruda.turno">Turno</th>
+                    <th translate="importcolexApp.telaCruda.gramaje">Gramaje</th>
+                    <th translate="importcolexApp.telaCruda.inicioParoMecanico">InicioParoMecanico</th>
+                    <th translate="importcolexApp.telaCruda.finParoMecanico">FinParoMecanico</th>
+                    <th translate="importcolexApp.telaCruda.motivoParoMecanico">MotivoParoMecanico</th>
+                    <th translate="importcolexApp.telaCruda.tipoTela">tipoTela</th>
+                    <th translate="importcolexApp.telaCruda.maquina">maquina</th>
+                    <th translate="importcolexApp.telaCruda.operario">operario</th>
+                    <th translate="importcolexApp.telaCruda.clientes">clientes</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="telaCruda in telaCrudas">
+                    <td><a ui-sref="telaCruda.detail({id:telaCruda.id})">{{telaCruda.id}}</a></td>
+                    <td>{{telaCruda.peso}}</td>
+                    <td>{{telaCruda.ancho}}</td>
+                    <td>{{telaCruda.costo}}</td>
+                    <td>{{telaCruda.fechaProduccion}}</td>
+                    <td>{{telaCruda.horaInicial}}</td>
+                    <td>{{telaCruda.horaFinal}}</td>
+                    <td>{{telaCruda.turno}}</td>
+                    <td>{{telaCruda.gramaje}}</td>
+                    <td>{{telaCruda.inicioParoMecanico}}</td>
+                    <td>{{telaCruda.finParoMecanico}}</td>
+                    <td>{{telaCruda.motivoParoMecanico}}</td>
+                    <td>
+                        <a ui-sref="tipoTela.detail({id:telaCruda.tipoTelaId})">{{telaCruda.tipoTelaNombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="maquina.detail({id:telaCruda.maquinaId})">{{telaCruda.maquinaId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="operario.detail({id:telaCruda.operarioId})">{{telaCruda.operarioNombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="clientes.detail({id:telaCruda.clientesId})">{{telaCruda.clientesNombre}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="telaCruda.detail({id:telaCruda.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="telaCruda.edit({id:telaCruda.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(telaCruda.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pager">
+                <li ng-show="links['first'] >= 0" ng-click="loadPage(links['first'])"><a href="#">&lt;&lt;</a></li>
+                <li ng-show="page > 0" ng-click="loadPage(links['prev'] || 0)"><a href="#">&lt;</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a href="#">&gt;</a></li>
+                <li ng-show="links['last'] > 0" ng-click="loadPage(links['last'])"><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

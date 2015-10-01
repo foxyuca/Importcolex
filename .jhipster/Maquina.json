@@ -1,0 +1,49 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "telaCruda",
+            "otherEntityName": "telaCruda",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "maquina"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "marca",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "45"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "galga",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "diametro",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "rpm",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "agujas",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151001214518",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

@@ -1,0 +1,84 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myOrdenCompraLabel" translate="importcolexApp.ordenCompra.home.createOrEditLabel">Create or edit a OrdenCompra</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="ordenCompra.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.ticket" for="field_ticket">Ticket</label>
+            <input type="number" class="form-control" name="ticket" id="field_ticket"
+                    ng-model="ordenCompra.ticket"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.cantidad" for="field_cantidad">Cantidad</label>
+            <input type="number" class="form-control" name="cantidad" id="field_cantidad"
+                    ng-model="ordenCompra.cantidad"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.costo" for="field_costo">Costo</label>
+            <input type="number" class="form-control" name="costo" id="field_costo"
+                    ng-model="ordenCompra.costo"
+                    required>
+            <div ng-show="editForm.costo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.costo.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.aprovada" for="field_aprovada">Aprovada</label>
+            <input type="checkbox" class="form-control" name="aprovada" id="field_aprovada"
+                    ng-model="ordenCompra.aprovada"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.ordenada" for="field_ordenada">Ordenada</label>
+            <input type="checkbox" class="form-control" name="ordenada" id="field_ordenada"
+                    ng-model="ordenCompra.ordenada"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.recibida" for="field_recibida">Recibida</label>
+            <input type="checkbox" class="form-control" name="recibida" id="field_recibida"
+                    ng-model="ordenCompra.recibida"
+                    >
+        </div>
+
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.proveedores" for="field_proveedores">proveedores</label>
+            <select class="form-control" id="field_proveedores" name="proveedores" ng-model="ordenCompra.proveedoresId" ng-options="proveedores.id as proveedores.nombre for proveedores in proveedoress">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.ordenCompra.fibras" for="field_fibras">fibras</label>
+            <select class="form-control" id="field_fibras" name="fibras" ng-model="ordenCompra.fibrasId" ng-options="fibras.id as fibras.nombre for fibras in fibrass">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

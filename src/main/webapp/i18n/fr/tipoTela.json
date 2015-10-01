@@ -1,0 +1,21 @@
+{
+    "importcolexApp": {
+        "tipoTela" : {
+            "home": {
+                "title": "TipoTelas",
+                "createLabel": "Créer un nouveau TipoTela",
+                "createOrEditLabel": "Créer ou éditer un TipoTela"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TipoTela {{ id }} ?"
+            },
+            "detail": {
+                "title": "TipoTela"
+            },
+            "nombre": "Nombre",
+            "direccionamientoTela": "DireccionamientoTela",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}
+

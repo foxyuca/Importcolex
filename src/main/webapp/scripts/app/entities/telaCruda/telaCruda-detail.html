@@ -1,0 +1,142 @@
+
+<div>
+    <h2><span translate="importcolexApp.telaCruda.detail.title">TelaCruda</span> {{telaCruda.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.peso">Peso</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.peso}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.ancho">Ancho</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.ancho}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.costo">Costo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.costo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.fechaProduccion">FechaProduccion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.fechaProduccion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.horaInicial">HoraInicial</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.horaInicial}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.horaFinal">HoraFinal</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.horaFinal}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.turno">Turno</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.turno}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.gramaje">Gramaje</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.gramaje}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.inicioParoMecanico">InicioParoMecanico</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.inicioParoMecanico}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.finParoMecanico">FinParoMecanico</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.finParoMecanico}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.motivoParoMecanico">MotivoParoMecanico</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{telaCruda.motivoParoMecanico}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.tipoTela">tipoTela</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="tipoTela.detail({id:telaCruda.tipoTelaId})">{{telaCruda.tipoTelaNombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.maquina">maquina</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="maquina.detail({id:telaCruda.maquinaId})">{{telaCruda.maquinaId}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.operario">operario</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="operario.detail({id:telaCruda.operarioId})">{{telaCruda.operarioNombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="importcolexApp.telaCruda.clientes">clientes</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="clientes.detail({id:telaCruda.clientesId})">{{telaCruda.clientesNombre}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

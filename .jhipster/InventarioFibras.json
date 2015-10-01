@@ -1,0 +1,57 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "fibras",
+            "otherEntityName": "fibras",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "fibrasTelaCruda",
+            "otherEntityName": "fibrasTelaCruda",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "inventarioFibras"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "lote",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "inventarioInicial",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "inventarioFinal",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "costo",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151001205333",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

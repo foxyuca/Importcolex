@@ -1,0 +1,23 @@
+{
+    "importcolexApp": {
+        "fibras" : {
+            "home": {
+                "title": "Fibrass",
+                "createLabel": "Créer un nouveau Fibras",
+                "createOrEditLabel": "Créer ou éditer un Fibras"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fibras {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fibras"
+            },
+            "nombre": "Nombre",
+            "titulo": "Titulo",
+            "filamentos": "Filamentos",
+            "ordenCompra": "OrdenCompra",
+            "inventarioFibras": "InventarioFibras"
+        }
+    }
+}
+

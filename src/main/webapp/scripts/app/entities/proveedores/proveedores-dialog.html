@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myProveedoresLabel" translate="importcolexApp.proveedores.home.createOrEditLabel">Create or edit a Proveedores</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="proveedores.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.proveedores.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="proveedores.nombre"
+                    required ng-maxlength="150">
+            <div ng-show="editForm.nombre.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nombre.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="150">
+                    This field cannot be longer than 150 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.proveedores.identificacion" for="field_identificacion">Identificacion</label>
+            <input type="text" class="form-control" name="identificacion" id="field_identificacion"
+                    ng-model="proveedores.identificacion"
+                    required>
+            <div ng-show="editForm.identificacion.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.identificacion.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.proveedores.direccion" for="field_direccion">Direccion</label>
+            <input type="text" class="form-control" name="direccion" id="field_direccion"
+                    ng-model="proveedores.direccion"
+                    required ng-maxlength="450">
+            <div ng-show="editForm.direccion.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.direccion.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.direccion.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="450">
+                    This field cannot be longer than 450 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.proveedores.telefono" for="field_telefono">Telefono</label>
+            <input type="text" class="form-control" name="telefono" id="field_telefono"
+                    ng-model="proveedores.telefono"
+                    required ng-maxlength="45" ng-pattern="/(^[0-9]+$)/">
+            <div ng-show="editForm.telefono.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.telefono.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.telefono.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="45">
+                    This field cannot be longer than 45 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.telefono.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="(^[0-9]+$)">
+                    This field should follow pattern "(^[0-9]+$)".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.proveedores.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="proveedores.email"
+                    required ng-maxlength="200" ng-pattern="/^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$/">
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.email.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.email.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.email.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="^[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$">
+                    This field should follow pattern "^[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$".
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,71 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "telaCruda",
+            "otherEntityName": "telaCruda",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "clientes"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "150"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "identificacion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "20"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "telefono",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMaxlength": "45",
+            "fieldValidateRulesPattern": "(^[0-9]+$)",
+            "fieldValidateRulesPatternJava": "(^[0-9]+$)"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "correo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMaxlength": "100",
+            "fieldValidateRulesPattern": "^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](\\.?[-!#$%&'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\\.[a-zA-Z](-?[a-zA-Z0-9])*)+$",
+            "fieldValidateRulesPatternJava": "^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](\\\\.?[-!#$%&'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\\\\.[a-zA-Z](-?[a-zA-Z0-9])*)+$"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "450"
+        }
+    ],
+    "changelogDate": "20151001215931",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

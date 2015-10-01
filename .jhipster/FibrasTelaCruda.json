@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "inventarioFibras",
+            "otherEntityName": "inventarioFibras",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "lote"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "telaCruda",
+            "otherEntityName": "telaCruda",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "referencia",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "peso",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151001222802",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

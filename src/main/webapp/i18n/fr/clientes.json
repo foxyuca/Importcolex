@@ -1,0 +1,24 @@
+{
+    "importcolexApp": {
+        "clientes" : {
+            "home": {
+                "title": "Clientess",
+                "createLabel": "Créer un nouveau Clientes",
+                "createOrEditLabel": "Créer ou éditer un Clientes"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Clientes {{ id }} ?"
+            },
+            "detail": {
+                "title": "Clientes"
+            },
+            "nombre": "Nombre",
+            "identificacion": "Identificacion",
+            "telefono": "Telefono",
+            "correo": "Correo",
+            "direccion": "Direccion",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}
+

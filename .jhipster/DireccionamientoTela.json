@@ -1,0 +1,26 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "tipoTela",
+            "otherEntityName": "tipoTela",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "direccionamientoTela"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        }
+    ],
+    "changelogDate": "20151001211415",
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myMaquinaLabel" translate="importcolexApp.maquina.home.createOrEditLabel">Create or edit a Maquina</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="maquina.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.maquina.marca" for="field_marca">Marca</label>
+            <input type="text" class="form-control" name="marca" id="field_marca"
+                    ng-model="maquina.marca"
+                    required ng-maxlength="45">
+            <div ng-show="editForm.marca.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.marca.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.marca.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="45">
+                    This field cannot be longer than 45 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.maquina.galga" for="field_galga">Galga</label>
+            <input type="number" class="form-control" name="galga" id="field_galga"
+                    ng-model="maquina.galga"
+                    required>
+            <div ng-show="editForm.galga.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.galga.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.galga.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.maquina.diametro" for="field_diametro">Diametro</label>
+            <input type="number" class="form-control" name="diametro" id="field_diametro"
+                    ng-model="maquina.diametro"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.maquina.rpm" for="field_rpm">Rpm</label>
+            <input type="number" class="form-control" name="rpm" id="field_rpm"
+                    ng-model="maquina.rpm"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="importcolexApp.maquina.agujas" for="field_agujas">Agujas</label>
+            <input type="number" class="form-control" name="agujas" id="field_agujas"
+                    ng-model="maquina.agujas"
+                    >
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

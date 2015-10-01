@@ -1,0 +1,24 @@
+{
+    "importcolexApp": {
+        "maquina" : {
+            "home": {
+                "title": "Maquinas",
+                "createLabel": "Créer un nouveau Maquina",
+                "createOrEditLabel": "Créer ou éditer un Maquina"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Maquina {{ id }} ?"
+            },
+            "detail": {
+                "title": "Maquina"
+            },
+            "marca": "Marca",
+            "galga": "Galga",
+            "diametro": "Diametro",
+            "rpm": "Rpm",
+            "agujas": "Agujas",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}
+

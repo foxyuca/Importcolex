@@ -1,0 +1,26 @@
+{
+    "importcolexApp": {
+        "inventarioFibras" : {
+            "home": {
+                "title": "InventarioFibrass",
+                "createLabel": "Create a new InventarioFibras",
+                "createOrEditLabel": "Create or edit a InventarioFibras"
+            },
+            "created": "A new InventarioFibras is created with identifier {{ param }}",
+            "updated": "A InventarioFibras is updated with identifier {{ param }}",
+            "deleted": "A InventarioFibras is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete InventarioFibras {{ id }}?"
+            },
+            "detail": {
+                "title": "InventarioFibras"
+            },
+            "lote": "Lote",
+            "inventarioInicial": "InventarioInicial",
+            "inventarioFinal": "InventarioFinal",
+            "costo": "Costo",
+            "fibras": "Fibras",
+            "fibrasTelaCruda": "FibrasTelaCruda"
+        }
+    }
+}
