@@ -3,11 +3,14 @@
         "maquina" : {
             "home": {
                 "title": "Maquinas",
-                "createLabel": "Créer un nouveau Maquina",
-                "createOrEditLabel": "Créer ou éditer un Maquina"
+                "createLabel": "Create a new Maquina",
+                "createOrEditLabel": "Create or edit a Maquina"
             },
+            "created": "A new Maquina is created with identifier {{ param }}",
+            "updated": "A Maquina is updated with identifier {{ param }}",
+            "deleted": "A Maquina is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Maquina {{ id }} ?"
+                "question": "Are you sure you want to delete Maquina {{ id }}?"
             },
             "detail": {
                 "title": "Maquina"
@@ -21,4 +24,3 @@
         }
     }
 }
-

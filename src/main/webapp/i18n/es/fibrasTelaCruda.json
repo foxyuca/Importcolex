@@ -1,0 +1,24 @@
+{
+    "importcolexApp": {
+        "fibrasTelaCruda" : {
+            "home": {
+                "title": "FibrasTelaCrudas",
+                "createLabel": "Create a new FibrasTelaCruda",
+                "createOrEditLabel": "Create or edit a FibrasTelaCruda"
+            },
+            "created": "A new FibrasTelaCruda is created with identifier {{ param }}",
+            "updated": "A FibrasTelaCruda is updated with identifier {{ param }}",
+            "deleted": "A FibrasTelaCruda is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete FibrasTelaCruda {{ id }}?"
+            },
+            "detail": {
+                "title": "FibrasTelaCruda"
+            },
+            "referencia": "Referencia",
+            "peso": "Peso",
+            "inventarioFibras": "InventarioFibras",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}

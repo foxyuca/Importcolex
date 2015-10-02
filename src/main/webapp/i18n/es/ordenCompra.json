@@ -3,11 +3,14 @@
         "ordenCompra" : {
             "home": {
                 "title": "OrdenCompras",
-                "createLabel": "Créer un nouveau OrdenCompra",
-                "createOrEditLabel": "Créer ou éditer un OrdenCompra"
+                "createLabel": "Create a new OrdenCompra",
+                "createOrEditLabel": "Create or edit a OrdenCompra"
             },
+            "created": "A new OrdenCompra is created with identifier {{ param }}",
+            "updated": "A OrdenCompra is updated with identifier {{ param }}",
+            "deleted": "A OrdenCompra is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le OrdenCompra {{ id }} ?"
+                "question": "Are you sure you want to delete OrdenCompra {{ id }}?"
             },
             "detail": {
                 "title": "OrdenCompra"
@@ -23,4 +26,3 @@
         }
     }
 }
-

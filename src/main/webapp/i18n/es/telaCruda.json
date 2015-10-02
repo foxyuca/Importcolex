@@ -3,11 +3,14 @@
         "telaCruda" : {
             "home": {
                 "title": "TelaCrudas",
-                "createLabel": "Créer un nouveau TelaCruda",
-                "createOrEditLabel": "Créer ou éditer un TelaCruda"
+                "createLabel": "Create a new TelaCruda",
+                "createOrEditLabel": "Create or edit a TelaCruda"
             },
+            "created": "A new TelaCruda is created with identifier {{ param }}",
+            "updated": "A TelaCruda is updated with identifier {{ param }}",
+            "deleted": "A TelaCruda is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le TelaCruda {{ id }} ?"
+                "question": "Are you sure you want to delete TelaCruda {{ id }}?"
             },
             "detail": {
                 "title": "TelaCruda"
@@ -31,4 +34,3 @@
         }
     }
 }
-

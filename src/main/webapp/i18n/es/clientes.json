@@ -3,11 +3,14 @@
         "clientes" : {
             "home": {
                 "title": "Clientess",
-                "createLabel": "Créer un nouveau Clientes",
-                "createOrEditLabel": "Créer ou éditer un Clientes"
+                "createLabel": "Create a new Clientes",
+                "createOrEditLabel": "Create or edit a Clientes"
             },
+            "created": "A new Clientes is created with identifier {{ param }}",
+            "updated": "A Clientes is updated with identifier {{ param }}",
+            "deleted": "A Clientes is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Clientes {{ id }} ?"
+                "question": "Are you sure you want to delete Clientes {{ id }}?"
             },
             "detail": {
                 "title": "Clientes"
@@ -21,4 +24,3 @@
         }
     }
 }
-

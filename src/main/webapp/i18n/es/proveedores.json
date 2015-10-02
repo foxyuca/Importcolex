@@ -3,11 +3,14 @@
         "proveedores" : {
             "home": {
                 "title": "Proveedoress",
-                "createLabel": "Créer un nouveau Proveedores",
-                "createOrEditLabel": "Créer ou éditer un Proveedores"
+                "createLabel": "Create a new Proveedores",
+                "createOrEditLabel": "Create or edit a Proveedores"
             },
+            "created": "A new Proveedores is created with identifier {{ param }}",
+            "updated": "A Proveedores is updated with identifier {{ param }}",
+            "deleted": "A Proveedores is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Proveedores {{ id }} ?"
+                "question": "Are you sure you want to delete Proveedores {{ id }}?"
             },
             "detail": {
                 "title": "Proveedores"
@@ -21,4 +24,3 @@
         }
     }
 }
-

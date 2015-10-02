@@ -3,11 +3,14 @@
         "inventarioFibras" : {
             "home": {
                 "title": "InventarioFibrass",
-                "createLabel": "Créer un nouveau InventarioFibras",
-                "createOrEditLabel": "Créer ou éditer un InventarioFibras"
+                "createLabel": "Create a new InventarioFibras",
+                "createOrEditLabel": "Create or edit a InventarioFibras"
             },
+            "created": "A new InventarioFibras is created with identifier {{ param }}",
+            "updated": "A InventarioFibras is updated with identifier {{ param }}",
+            "deleted": "A InventarioFibras is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le InventarioFibras {{ id }} ?"
+                "question": "Are you sure you want to delete InventarioFibras {{ id }}?"
             },
             "detail": {
                 "title": "InventarioFibras"
@@ -21,4 +24,3 @@
         }
     }
 }
-

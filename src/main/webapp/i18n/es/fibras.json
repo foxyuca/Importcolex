@@ -3,11 +3,14 @@
         "fibras" : {
             "home": {
                 "title": "Fibrass",
-                "createLabel": "Créer un nouveau Fibras",
-                "createOrEditLabel": "Créer ou éditer un Fibras"
+                "createLabel": "Create a new Fibras",
+                "createOrEditLabel": "Create or edit a Fibras"
             },
+            "created": "A new Fibras is created with identifier {{ param }}",
+            "updated": "A Fibras is updated with identifier {{ param }}",
+            "deleted": "A Fibras is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Fibras {{ id }} ?"
+                "question": "Are you sure you want to delete Fibras {{ id }}?"
             },
             "detail": {
                 "title": "Fibras"
@@ -20,4 +23,3 @@
         }
     }
 }
-
