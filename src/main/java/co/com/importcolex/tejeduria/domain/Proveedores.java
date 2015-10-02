@@ -1,11 +1,13 @@
 package co.com.importcolex.tejeduria.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -53,6 +55,10 @@ public class Proveedores implements Serializable {
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<OrdenCompra> ordencompras = new HashSet<>();
+    
+    @ManyToOne
+    private TipoIdentificacion tipoIdentificacion;
+
 
     public Long getId() {
         return id;
@@ -109,8 +115,18 @@ public class Proveedores implements Serializable {
     public void setOrdencompras(Set<OrdenCompra> ordenCompras) {
         this.ordencompras = ordenCompras;
     }
+    
+    
 
-    @Override
+    public TipoIdentificacion getTipoIdentificacion() {
+		return tipoIdentificacion;
+	}
+
+	public void setTipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
+		this.tipoIdentificacion = tipoIdentificacion;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

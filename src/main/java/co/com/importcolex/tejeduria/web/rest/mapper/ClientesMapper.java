@@ -4,10 +4,12 @@ import co.com.importcolex.tejeduria.domain.*;
 import co.com.importcolex.tejeduria.web.rest.dto.ClientesDTO;
 
 import org.mapstruct.*;
+import org.springframework.stereotype.Component;
 
 /**
  * Mapper for the entity Clientes and its DTO ClientesDTO.
  */
+
 @Mapper(componentModel = "spring", uses = {})
 public interface ClientesMapper {
 
