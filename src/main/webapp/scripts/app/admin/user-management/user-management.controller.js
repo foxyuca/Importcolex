@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('importcolexApp')
-    .controller('UserManagementController', function ($scope, User, ParseLinks, Language) {
+    .controller('UserManagementController', function ($scope, $rootScope, User, Authority, ParseLinks, Language) {
         $scope.users = [];
-        $scope.authorities = ["ROLE_USER", "ROLE_ADMIN"];
+        $scope.authorities = [];
         Language.getAll().then(function (languages) {
             $scope.languages = languages;
         });
@@ -15,13 +15,20 @@ angular.module('importcolexApp')
                 $scope.users = result;
             });
         };
+        
+        $scope.loadAllAuthorities = function () {
+        	Authority.query({page: $scope.page, per_page: 20}, function (result, headers) {
+                $scope.authorities = result;
+            });
+        };
 
         $scope.loadPage = function (page) {
             $scope.page = page;
             $scope.loadAll();
         };
         $scope.loadAll();
-
+        $scope.loadAllAuthorities();
+        
         $scope.setActive = function (user, isActivated) {
             user.activated = isActivated;
             User.update(user, function () {

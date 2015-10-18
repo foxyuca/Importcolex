@@ -100,9 +100,13 @@
 
                         <div class="form-group">
                             <label translate="user-management.profiles">Profiles</label>
-                            <select class="form-control" multiple name="authority" ng-model="user.authorities"
-                                    ng-options="authority for authority in authorities">
-                            </select>
+<!--                             <select class="form-control" ng-model="user.authorities" id="profiles" -->
+<!--                                     ng-options="authority.name as authority.name for authority in authorities track by authority.name"> -->
+<!--                             </select> -->
+                            <select multiple class = "form-control" name="repeatSelect" id="repeatSelect" ng-model="user.authorities">
+     							 <option ng-repeat="authority in authorities track by authority.name" value="{{authority.name}}">{{authority.name}}</option>
+    						</select>
+                            <tt>multipleSelect = {{user.authorities}}</tt><br/>
                         </div>
                     </div>
                     <div class="modal-footer">
