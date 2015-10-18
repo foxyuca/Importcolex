@@ -4,8 +4,7 @@
             "home": {
                 "title": "TelaCrudas",
                 "createLabel": "Create a new TelaCruda",
-                "createOrEditLabel": "Create or edit a TelaCruda",
-                "asociarFibras": "Asociate Fiber to Crude Cloth"
+                "createOrEditLabel": "Create or edit a TelaCruda"
             },
             "created": "A new TelaCruda is created with identifier {{ param }}",
             "updated": "A TelaCruda is updated with identifier {{ param }}",
@@ -26,19 +25,12 @@
             "gramaje": "Gramaje",
             "inicioParoMecanico": "InicioParoMecanico",
             "finParoMecanico": "FinParoMecanico",
-            "paroMecanico": "Paro Mecanico",
             "motivoParoMecanico": "MotivoParoMecanico",
-            "fibrasTelaCruda": "Fiber Crude cloth",
-            "tipoTela": "Cloth Type",
-            "maquina": "Machine",
-            "operario": "Operator",
-            "clientes": "Clients",
-            "acciones": "Actions",
-            "asociarFibras": "Fiber Asociate",
-            "referencia": "Reference",
-            "peso": "Height",
-            "idFibra": "ID Fiber",
-            "idTelaCruda": "ID Crude Cloth"
+            "fibrasTelaCruda": "FibrasTelaCruda",
+            "tipoTela": "TipoTela",
+            "maquina": "Maquina",
+            "operario": "Operario",
+            "clientes": "Clientes"
         }
     }
 }

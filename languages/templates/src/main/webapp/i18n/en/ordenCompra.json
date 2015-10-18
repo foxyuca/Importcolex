@@ -1,0 +1,28 @@
+{
+    "importcolexApp": {
+        "ordenCompra" : {
+            "home": {
+                "title": "OrdenCompras",
+                "createLabel": "Create a new OrdenCompra",
+                "createOrEditLabel": "Create or edit a OrdenCompra"
+            },
+            "created": "A new OrdenCompra is created with identifier {{ param }}",
+            "updated": "A OrdenCompra is updated with identifier {{ param }}",
+            "deleted": "A OrdenCompra is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete OrdenCompra {{ id }}?"
+            },
+            "detail": {
+                "title": "OrdenCompra"
+            },
+            "ticket": "Ticket",
+            "cantidad": "Cantidad",
+            "costo": "Costo",
+            "aprovada": "Aprovada",
+            "ordenada": "Ordenada",
+            "recibida": "Recibida",
+            "proveedores": "Proveedores",
+            "fibras": "Fibras"
+        }
+    }
+}

@@ -40,52 +40,28 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                	<th translate="importcolexApp.telaCruda.acciones">Actions</th>
                     <th translate="global.field.id">ID</th>
-                    <th translate="importcolexApp.telaCruda.peso">Peso</th>
-                    <th translate="importcolexApp.telaCruda.ancho">Ancho</th>
-                    <th translate="importcolexApp.telaCruda.costo">Costo</th>
                     <th translate="importcolexApp.telaCruda.fechaProduccion">FechaProduccion</th>
                     <th translate="importcolexApp.telaCruda.horaInicial">HoraInicial</th>
                     <th translate="importcolexApp.telaCruda.horaFinal">HoraFinal</th>
+                    <th translate="importcolexApp.telaCruda.peso">Peso</th>
+                    <th translate="importcolexApp.telaCruda.ancho">Ancho</th>
+                    <th translate="importcolexApp.telaCruda.costo">Costo</th>
                     <th translate="importcolexApp.telaCruda.turno">Turno</th>
                     <th translate="importcolexApp.telaCruda.gramaje">Gramaje</th>
-                    <th translate="importcolexApp.telaCruda.inicioParoMecanico">InicioParoMecanico</th>
-                    <th translate="importcolexApp.telaCruda.finParoMecanico">FinParoMecanico</th>
-                    <th translate="importcolexApp.telaCruda.motivoParoMecanico">MotivoParoMecanico</th>
                     <th translate="importcolexApp.telaCruda.tipoTela">tipoTela</th>
                     <th translate="importcolexApp.telaCruda.maquina">maquina</th>
                     <th translate="importcolexApp.telaCruda.operario">operario</th>
                     <th translate="importcolexApp.telaCruda.clientes">clientes</th>
-                    <th></th>
+                    <th translate="importcolexApp.telaCruda.inicioParoMecanico">InicioParoMecanico</th>
+                    <th translate="importcolexApp.telaCruda.finParoMecanico">FinParoMecanico</th>
+                    <th translate="importcolexApp.telaCruda.motivoParoMecanico">MotivoParoMecanico</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="telaCruda in telaCrudas">
-                    <td><a ui-sref="telaCruda.detail({id:telaCruda.id})">{{telaCruda.id}}</a></td>
-                    <td>{{telaCruda.peso}}</td>
-                    <td>{{telaCruda.ancho}}</td>
-                    <td>{{telaCruda.costo}}</td>
-                    <td>{{telaCruda.fechaProduccion}}</td>
-                    <td>{{telaCruda.horaInicial}}</td>
-                    <td>{{telaCruda.horaFinal}}</td>
-                    <td>{{telaCruda.turno}}</td>
-                    <td>{{telaCruda.gramaje}}</td>
-                    <td>{{telaCruda.inicioParoMecanico}}</td>
-                    <td>{{telaCruda.finParoMecanico}}</td>
-                    <td>{{telaCruda.motivoParoMecanico}}</td>
-                    <td>
-                        <a ui-sref="tipoTela.detail({id:telaCruda.tipoTelaId})">{{telaCruda.tipoTelaNombre}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="maquina.detail({id:telaCruda.maquinaId})">{{telaCruda.maquinaId}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="operario.detail({id:telaCruda.operarioId})">{{telaCruda.operarioNombre}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="clientes.detail({id:telaCruda.clientesId})">{{telaCruda.clientesNombre}}</a>
-                    </td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="telaCruda.detail({id:telaCruda.id})"
                                 class="btn btn-info btn-sm">
@@ -101,7 +77,36 @@
                                 class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
+                        <button type="submit"
+                                ui-sref="telaCruda.newTelaCrudaByFibras({id:telaCruda.id})"
+                                class="btn btn-success btn-sm">
+                            <span class="glyphicon glyphicon-resize-small"></span>&nbsp;<span translate="importcolexApp.telaCruda.asociarFibras">Asociar Fibras</span>
+                        </button>
                     </td>
+                    <td><a ui-sref="telaCruda.detail({id:telaCruda.id})">{{telaCruda.id}}</a></td>
+                    <td>{{telaCruda.fechaProduccion}}</td>
+                    <td>{{telaCruda.horaInicial}}</td>
+                    <td>{{telaCruda.horaFinal}}</td>
+                    <td>{{telaCruda.peso}}</td>
+                    <td>{{telaCruda.ancho}}</td>
+                    <td>{{telaCruda.costo}}</td>
+                    <td>{{telaCruda.turno}}</td>
+                    <td>{{telaCruda.gramaje}}</td>
+                    <td>
+                        <a ui-sref="tipoTela.detail({id:telaCruda.tipoTelaId})">{{telaCruda.tipoTelaNombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="maquina.detail({id:telaCruda.maquinaId})">{{telaCruda.maquinaId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="operario.detail({id:telaCruda.operarioId})">{{telaCruda.operarioNombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="clientes.detail({id:telaCruda.clientesId})">{{telaCruda.clientesNombre}}</a>
+                    </td>
+                    <td>{{telaCruda.inicioParoMecanico}}</td>
+                    <td>{{telaCruda.finParoMecanico}}</td>
+                    <td>{{telaCruda.motivoParoMecanico}}</td>
                 </tr>
             </tbody>
         </table>

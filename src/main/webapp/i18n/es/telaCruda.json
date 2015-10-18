@@ -2,9 +2,10 @@
     "importcolexApp": {
         "telaCruda" : {
             "home": {
-                "title": "TelaCrudas",
-                "createLabel": "Create a new TelaCruda",
-                "createOrEditLabel": "Create or edit a TelaCruda"
+                "title": "Gestion de Telas Crudas",
+                "createLabel": "Crear nueva Tela Cruda",
+                "createOrEditLabel": "Crear o Editar una TelaCruda",
+                "asociarFibras": "Asociar Fibras a Tela Cruda"
             },
             "created": "A new TelaCruda is created with identifier {{ param }}",
             "updated": "A TelaCruda is updated with identifier {{ param }}",
@@ -25,12 +26,19 @@
             "gramaje": "Gramaje",
             "inicioParoMecanico": "InicioParoMecanico",
             "finParoMecanico": "FinParoMecanico",
+            "paroMecanico": "Paro Mecanico",
             "motivoParoMecanico": "MotivoParoMecanico",
             "fibrasTelaCruda": "FibrasTelaCruda",
             "tipoTela": "TipoTela",
             "maquina": "Maquina",
             "operario": "Operario",
-            "clientes": "Clientes"
+            "clientes": "Clientes",
+            "acciones": "Acciones",
+            "asociarFibras": "Asociar Fibras",
+            "referencia": "Referencia",
+            "peso": "peso",
+            "idFibra": "ID Fibra",
+            "idTelaCruda": "ID Tela Cruda"
         }
     }
 }

@@ -19,6 +19,7 @@ angular.module('importcolexApp').controller('TelaCrudaDialogController',
         var onSaveFinished = function (result) {
             $scope.$emit('importcolexApp:telaCrudaUpdate', result);
             $modalInstance.close(result);
+            
         };
 
         $scope.save = function () {

@@ -142,25 +142,6 @@
             </div>
         </div>
         <div class="form-group">
-            <label translate="importcolexApp.telaCruda.inicioParoMecanico" for="field_inicioParoMecanico">InicioParoMecanico</label>
-            <input type="datetime-local" class="form-control" name="inicioParoMecanico" id="field_inicioParoMecanico"
-                    ng-model="telaCruda.inicioParoMecanico" ng-model-options="{timezone: 'UTC'}"
-                    >
-        </div>
-        <div class="form-group">
-            <label translate="importcolexApp.telaCruda.finParoMecanico" for="field_finParoMecanico">FinParoMecanico</label>
-            <input type="datetime-local" class="form-control" name="finParoMecanico" id="field_finParoMecanico"
-                    ng-model="telaCruda.finParoMecanico" ng-model-options="{timezone: 'UTC'}"
-                    >
-        </div>
-        <div class="form-group">
-            <label translate="importcolexApp.telaCruda.motivoParoMecanico" for="field_motivoParoMecanico">MotivoParoMecanico</label>
-            <input type="text" class="form-control" name="motivoParoMecanico" id="field_motivoParoMecanico"
-                    ng-model="telaCruda.motivoParoMecanico"
-                    >
-        </div>
-
-        <div class="form-group">
             <label translate="importcolexApp.telaCruda.tipoTela" for="field_tipoTela">tipoTela</label>
             <select class="form-control" id="field_tipoTela" name="tipoTela" ng-model="telaCruda.tipoTelaId" ng-options="tipoTela.id as tipoTela.nombre for tipoTela in tipotelas">
                 <option value=""></option>
@@ -183,6 +164,30 @@
             <select class="form-control" id="field_clientes" name="clientes" ng-model="telaCruda.clientesId" ng-options="clientes.id as clientes.nombre for clientes in clientess">
                 <option value=""></option>
             </select>
+        </div>
+		<div class="form-group">
+           <label for="paroMecanico">
+           		<input type="checkbox" id="paroMecanico" ng-model="ModelData.paroMecanico">
+           		<span translate="importcolexApp.telaCruda.paroMecanico">Activated</span>
+           </label>
+        </div>
+	    <div class="form-group" ng-show="ModelData.paroMecanico">
+            <label translate="importcolexApp.telaCruda.inicioParoMecanico" for="field_inicioParoMecanico">InicioParoMecanico</label>
+            <input type="datetime-local" class="form-control" name="inicioParoMecanico" id="field_inicioParoMecanico"
+                    ng-model="telaCruda.inicioParoMecanico" ng-model-options="{timezone: 'UTC'}"
+                    >
+        </div>
+        <div class="form-group" ng-show="ModelData.paroMecanico">
+            <label translate="importcolexApp.telaCruda.finParoMecanico" for="field_finParoMecanico">FinParoMecanico</label>
+            <input type="datetime-local" class="form-control" name="finParoMecanico" id="field_finParoMecanico"
+                    ng-model="telaCruda.finParoMecanico" ng-model-options="{timezone: 'UTC'}"
+                    >
+        </div>
+        <div class="form-group" ng-show="ModelData.paroMecanico">
+            <label translate="importcolexApp.telaCruda.motivoParoMecanico" for="field_motivoParoMecanico">MotivoParoMecanico</label>
+            <input type="text" class="form-control" name="motivoParoMecanico" id="field_motivoParoMecanico"
+                    ng-model="telaCruda.motivoParoMecanico"
+                    >
         </div>
     </div>
     <div class="modal-footer">

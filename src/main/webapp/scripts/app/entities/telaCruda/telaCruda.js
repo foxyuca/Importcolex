@@ -7,7 +7,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/telaCrudas',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                     pageTitle: 'importcolexApp.telaCruda.home.title'
                 },
                 views: {
@@ -28,7 +28,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/telaCruda/{id}',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                     pageTitle: 'importcolexApp.telaCruda.detail.title'
                 },
                 views: {
@@ -51,7 +51,7 @@ angular.module('importcolexApp')
                 parent: 'telaCruda',
                 url: '/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({
@@ -70,11 +70,34 @@ angular.module('importcolexApp')
                     })
                 }]
             })
+            .state('telaCruda.newTelaCrudaByFibras', {
+                parent: 'telaCruda',
+                url: '/{id}/newTelaCrudaByFibras',
+                data: {
+                    authorities: ['ROLE_OPERARIO'],
+                },
+                onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
+                    $modal.open({
+                        templateUrl:'scripts/app/entities/telaCruda/telaCrudaByFibras-dialog.html',
+                        controller: 'TelaCrudaByFibrasDialogController',
+                        size: 'lg',
+                        resolve: {
+                            entity: function () {
+                                return {telaCrudaId:$stateParams.id, referencia: null, peso: null, id: null};
+                            }
+                        }
+                    }).result.then(function(result) {
+                        $state.go('telaCruda', null, { reload: true });
+                    }, function() {
+                        $state.go('telaCruda');
+                    })
+                }]
+            })
             .state('telaCruda.edit', {
                 parent: 'telaCruda',
                 url: '/{id}/edit',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({

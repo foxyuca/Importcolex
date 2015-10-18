@@ -1,11 +1,11 @@
 {
     "main": {
-        "title": "¡Bienvenido, Importcolex!",
-        "subtitle": "Recuerda reportar todo tu trabajo, es un beneficio para todos!",
+        "title": "¡Bienvenido, Java Hipster!",
+        "subtitle": "Esta es su página de inicio",
         "logged": {
             "message": "Esta conectado como \"{{username}}\"."
         },
-        "question": "Si tiene preguntas sobre este software:",
+        "question": "Si tiene preguntas sobre JHipster:",
         "link": {
             "homepage": "Página de inicio de JHipster",
             "stackoverflow": "JHipster en Stack Overflow",

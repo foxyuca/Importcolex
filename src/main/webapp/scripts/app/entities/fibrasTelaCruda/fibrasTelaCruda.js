@@ -7,7 +7,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/fibrasTelaCrudas',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                     pageTitle: 'importcolexApp.fibrasTelaCruda.home.title'
                 },
                 views: {
@@ -28,7 +28,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/fibrasTelaCruda/{id}',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                     pageTitle: 'importcolexApp.fibrasTelaCruda.detail.title'
                 },
                 views: {
@@ -51,7 +51,7 @@ angular.module('importcolexApp')
                 parent: 'fibrasTelaCruda',
                 url: '/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({
@@ -74,7 +74,7 @@ angular.module('importcolexApp')
                 parent: 'fibrasTelaCruda',
                 url: '/{id}/edit',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_OPERARIO'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({

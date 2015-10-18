@@ -1,0 +1,26 @@
+{
+    "importcolexApp": {
+        "maquina" : {
+            "home": {
+                "title": "Maquinas",
+                "createLabel": "Create a new Maquina",
+                "createOrEditLabel": "Create or edit a Maquina"
+            },
+            "created": "A new Maquina is created with identifier {{ param }}",
+            "updated": "A Maquina is updated with identifier {{ param }}",
+            "deleted": "A Maquina is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Maquina {{ id }}?"
+            },
+            "detail": {
+                "title": "Maquina"
+            },
+            "marca": "Marca",
+            "galga": "Galga",
+            "diametro": "Diametro",
+            "rpm": "Rpm",
+            "agujas": "Agujas",
+            "telaCruda": "TelaCruda"
+        }
+    }
+}
