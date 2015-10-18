@@ -123,3 +123,11 @@ Desktop.ini
 ######################
 !gradle/wrapper/gradle-wrapper.jar
 /target/
+node_modules
+.idea
+*.iml
+atlassian-ide-plugin.xml
+/.project
+test/temp/
+npm-debug.log
+/README.md

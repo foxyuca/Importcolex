@@ -18,15 +18,15 @@
             />
 
     <cache name="co.com.importcolex.tejeduria.domain.User"
-           timeToLiveSeconds="3600">
+           timeToLiveSeconds="10">
     </cache>
 
     <cache name="co.com.importcolex.tejeduria.domain.Authority"
-           timeToLiveSeconds="3600">
+           timeToLiveSeconds="10">
     </cache>
 
     <cache name="co.com.importcolex.tejeduria.domain.User.authorities"
-           timeToLiveSeconds="3600">
+           timeToLiveSeconds="10">
     </cache>
 
     <cache name="co.com.importcolex.tejeduria.domain.PersistentToken"
