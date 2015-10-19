@@ -19,6 +19,7 @@ angular.module('importcolexApp')
         $scope.delete = function (id) {
             TelaCruda.get({id: id}, function(result) {
                 $scope.telaCruda = result;
+                $('#deleteTelaCrudaConfirmation').modal('show');
             });
         };
 

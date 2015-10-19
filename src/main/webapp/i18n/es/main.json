@@ -1,11 +1,11 @@
 {
     "main": {
-        "title": "¡Bienvenido, Java Hipster!",
+        "title": "¡Bienvenido al sistema Tejeduria Imporcolex!",
         "subtitle": "Esta es su página de inicio",
         "logged": {
             "message": "Esta conectado como \"{{username}}\"."
         },
-        "question": "Si tiene preguntas sobre JHipster:",
+        "question": "Si tiene preguntas sobre este Sistema:",
         "link": {
             "homepage": "Página de inicio de JHipster",
             "stackoverflow": "JHipster en Stack Overflow",
@@ -13,7 +13,7 @@
             "chat": "JHipster public chat room",
             "contact": "contacto @java_hipster en Twitter"
         },
-        "like": "Si le gusta JHipster, danos una estrella en",
+        "like": "Recuerda reportar todo tu trabajo en el Sistema",
         "github": "Github"
     }
 }

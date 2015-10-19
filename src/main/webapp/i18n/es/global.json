@@ -5,7 +5,19 @@
         "menu": {
             "home": "Inicio",
             "entities": {
-                "main": "Entities",
+                "main": "Menu Principal",
+                "fibras": "Fibras",
+                "proveedores": "Proveedores",
+                "tipoIdentificacion": "TipoIdentificacion",
+                "ordenCompra": "OrdenCompra",
+                "inventarioFibras": "InventarioFibras",
+                "direccionamientoTela": "DireccionamientoTela",
+                "tipoTela": "TipoTela",
+                "maquina": "Maquina",
+                "operario": "Operario",
+                "clientes": "Clientes",
+                "telaCruda": "Gestion De tela Cruda",
+                "fibrasTelaCruda": "Asociacion De fibras Tela Cruda",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -19,15 +31,15 @@
             },
             "admin": {
                 "main": "Administración",
-                "user-management": "User management",
+                "user-management": "Administrador de Usuarios",
                 "tracker": "Rastreador de los usarios",
                 "metrics": "Métricas",
                 "health": "Health",
-                "configuration": "Configuration",
+                "configuration": "Configuracion",
                 "logs": "Logs",
                 "audits": "Auditorías",
                 "apidocs": "API",
-                "database": "Database"
+                "database": "Base de Datos"
             },
             "language": "Idioma"
         },
@@ -92,7 +104,7 @@
             "title": "Confirm delete operation"
         },
         "validation": {
-            "required": "This field is required.",
+            "required": "Este Campo es Requerido.",
             "minlength": "This field is required to be at least {{min}} characters.",
             "maxlength": "This field cannot be longer than {{max}} characters.",
             "min": "This field should be more than {{min}}.",
