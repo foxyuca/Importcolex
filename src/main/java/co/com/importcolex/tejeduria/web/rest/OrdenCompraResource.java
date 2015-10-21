@@ -1,12 +1,15 @@
 package co.com.importcolex.tejeduria.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
 import co.com.importcolex.tejeduria.domain.OrdenCompra;
+import co.com.importcolex.tejeduria.domain.util.CustomRandomGenerator;
 import co.com.importcolex.tejeduria.repository.OrdenCompraRepository;
 import co.com.importcolex.tejeduria.web.rest.util.HeaderUtil;
 import co.com.importcolex.tejeduria.web.rest.util.PaginationUtil;
 import co.com.importcolex.tejeduria.web.rest.dto.OrdenCompraDTO;
 import co.com.importcolex.tejeduria.web.rest.mapper.OrdenCompraMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -20,6 +23,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+
+import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.LinkedList;
@@ -42,6 +47,10 @@ public class OrdenCompraResource {
     @Inject
     private OrdenCompraMapper ordenCompraMapper;
 
+    @Inject
+    public CustomRandomGenerator customRandomGenerator;
+
+    
     /**
      * POST  /ordenCompras -> Create a new ordenCompra.
      */
@@ -55,6 +64,7 @@ public class OrdenCompraResource {
             return ResponseEntity.badRequest().header("Failure", "A new ordenCompra cannot already have an ID").body(null);
         }
         OrdenCompra ordenCompra = ordenCompraMapper.ordenCompraDTOToOrdenCompra(ordenCompraDTO);
+        ordenCompra.setTicket(new BigDecimal(customRandomGenerator.generateRandomTicket(99999999L)));
         OrdenCompra result = ordenCompraRepository.save(ordenCompra);
         return ResponseEntity.created(new URI("/api/ordenCompras/" + result.getId()))
                 .headers(HeaderUtil.createEntityCreationAlert("ordenCompra", result.getId().toString()))
@@ -126,4 +136,5 @@ public class OrdenCompraResource {
         ordenCompraRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("ordenCompra", id.toString())).build();
     }
+    
 }

@@ -40,4 +40,16 @@
         </createTable>
         
     </changeSet>
+        <changeSet id="201510012007578" author="Victor Perez">
+    	<addColumn tableName="PROVEEDORES">
+    		<column name="tipo_identificacion_id" type="bigint">
+                <constraints nullable="false" />
+    		</column>
+    	</addColumn>
+    	<addForeignKeyConstraint constraintName="fk_ordencompra_proveedores_id" 
+    							 referencedTableName="TIPO_IDENTIFICACION" 
+    							 baseColumnNames="tipo_identificacion_id" 
+    							 baseTableName="PROVEEDORES" 
+    							 referencedColumnNames="id"/>
+    </changeSet>
 </databaseChangeLog>

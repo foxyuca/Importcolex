@@ -1,6 +1,7 @@
 package co.com.importcolex.tejeduria.web.rest.dto;
 
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +19,8 @@ public class ProveedoresDTO implements Serializable {
     @Size(max = 150)
     private String nombre;
 
+    private String tipoIdentificacionNombre;
+    
     @NotNull
     private String identificacion;
 
@@ -34,6 +37,8 @@ public class ProveedoresDTO implements Serializable {
     @Size(max = 200)
     @Pattern(regexp = "^[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~](\\.?[-!#$%&amp;&#39;*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\\.[a-zA-Z](-?[a-zA-Z0-9])*)+$")
     private String email;
+    
+    private Long tipoIdentificacionId;
 
     public Long getId() {
         return id;
@@ -81,9 +86,26 @@ public class ProveedoresDTO implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
-    }
+    } 
 
-    @Override
+    public Long getTipoIdentificacionId() {
+		return tipoIdentificacionId;
+	}
+
+	public void setTipoIdentificacionId(Long tipoIdentificacionId) {
+		this.tipoIdentificacionId = tipoIdentificacionId;
+	}
+	
+
+	public String getTipoIdentificacionNombre() {
+		return tipoIdentificacionNombre;
+	}
+
+	public void setTipoIdentificacionNombre(String tipoIdentificacionNombre) {
+		this.tipoIdentificacionNombre = tipoIdentificacionNombre;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -98,6 +120,8 @@ public class ProveedoresDTO implements Serializable {
 
         return true;
     }
+    
+    
 
     @Override
     public int hashCode() {

@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('importcolexApp').controller('ProveedoresDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Proveedores', 'OrdenCompra',
-        function($scope, $stateParams, $modalInstance, entity, Proveedores, OrdenCompra) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Proveedores', 'OrdenCompra','TipoIdentificacion',
+        function($scope, $stateParams, $modalInstance, entity, Proveedores, OrdenCompra,TipoIdentificacion) {
 
         $scope.proveedores = entity;
         $scope.ordencompras = OrdenCompra.query();
+        $scope.tipoIdentificacion = TipoIdentificacion.query();
+        
         $scope.load = function(id) {
             Proveedores.get({id : id}, function(result) {
                 $scope.proveedores = result;

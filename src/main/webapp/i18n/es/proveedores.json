@@ -17,6 +17,7 @@
             },
             "nombre": "Nombre",
             "identificacion": "Identificacion",
+            "tipoIdentificacion": "Tipo de Identificacion",
             "direccion": "Direccion",
             "telefono": "Telefono",
             "email": "Email",

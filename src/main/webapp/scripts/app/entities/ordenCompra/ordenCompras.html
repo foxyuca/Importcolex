@@ -40,6 +40,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                	<th></th>
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.ordenCompra.ticket">Ticket</th>
                     <th translate="importcolexApp.ordenCompra.cantidad">Cantidad</th>
@@ -49,25 +50,11 @@
                     <th translate="importcolexApp.ordenCompra.recibida">Recibida</th>
                     <th translate="importcolexApp.ordenCompra.proveedores">proveedores</th>
                     <th translate="importcolexApp.ordenCompra.fibras">fibras</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="ordenCompra in ordenCompras">
-                    <td><a ui-sref="ordenCompra.detail({id:ordenCompra.id})">{{ordenCompra.id}}</a></td>
-                    <td>{{ordenCompra.ticket}}</td>
-                    <td>{{ordenCompra.cantidad}}</td>
-                    <td>{{ordenCompra.costo}}</td>
-                    <td>{{ordenCompra.aprovada}}</td>
-                    <td>{{ordenCompra.ordenada}}</td>
-                    <td>{{ordenCompra.recibida}}</td>
-                    <td>
-                        <a ui-sref="proveedores.detail({id:ordenCompra.proveedoresId})">{{ordenCompra.proveedoresNombre}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="fibras.detail({id:ordenCompra.fibrasId})">{{ordenCompra.fibrasNombre}}</a>
-                    </td>
-                    <td>
+                	 <td>
                         <button type="submit"
                                 ui-sref="ordenCompra.detail({id:ordenCompra.id})"
                                 class="btn btn-info btn-sm">
@@ -84,6 +71,20 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="ordenCompra.detail({id:ordenCompra.id})">{{ordenCompra.id}}</a></td>
+                    <td>{{ordenCompra.ticket}}</td>
+                    <td>{{ordenCompra.cantidad}}</td>
+                    <td>{{ordenCompra.costo}}</td>
+                    <td>{{ordenCompra.aprovada}}</td>
+                    <td>{{ordenCompra.ordenada}}</td>
+                    <td>{{ordenCompra.recibida}}</td>
+                    <td>
+                        <a ui-sref="proveedores.detail({id:ordenCompra.proveedoresId})">{{ordenCompra.proveedoresNombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="fibras.detail({id:ordenCompra.fibrasId})">{{ordenCompra.fibrasNombre}}</a>
+                    </td>
+                   
                 </tr>
             </tbody>
         </table>

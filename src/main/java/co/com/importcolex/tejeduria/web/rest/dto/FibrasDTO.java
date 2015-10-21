@@ -15,7 +15,7 @@ public class FibrasDTO implements Serializable {
     private Long id;
 
     @NotNull
-    @Size(min = 100)
+    @Size(max = 100)
     private String nombre;
 
     @NotNull
