@@ -19,6 +19,7 @@ public interface OrdenCompraMapper {
 
     @Mapping(source = "proveedoresId", target = "proveedores")
     @Mapping(source = "fibrasId", target = "fibras")
+    @Mapping(target = "inventarioFibrass", ignore = true)
     OrdenCompra ordenCompraDTOToOrdenCompra(OrdenCompraDTO ordenCompraDTO);
 
     default Proveedores proveedoresFromId(Long id) {

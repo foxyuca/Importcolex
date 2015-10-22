@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('importcolexApp').controller('InventarioFibrasDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'InventarioFibras', 'Fibras', 'FibrasTelaCruda',
-        function($scope, $stateParams, $modalInstance, entity, InventarioFibras, Fibras, FibrasTelaCruda) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'InventarioFibras', 'Fibras', 'FibrasTelaCruda','OrdenCompra',
+        function($scope, $stateParams, $modalInstance, entity, InventarioFibras, Fibras, FibrasTelaCruda,OrdenCompra) {
 
         $scope.inventarioFibras = entity;
         $scope.fibrass = Fibras.query();
+        $scope.ordenCompra = OrdenCompra.query();
         $scope.fibrastelacrudas = FibrasTelaCruda.query();
         $scope.load = function(id) {
             InventarioFibras.get({id : id}, function(result) {

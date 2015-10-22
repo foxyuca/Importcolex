@@ -24,7 +24,7 @@ public class Fibras implements Serializable {
     private Long id;
 
     @NotNull
-    @Size(min = 100)        
+    @Size(max = 100)        
     @Column(name = "nombre", nullable = false)
     private String nombre;
 

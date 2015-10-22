@@ -2,8 +2,8 @@
     "importcolexApp": {
         "inventarioFibras" : {
             "home": {
-                "title": "InventarioFibrass",
-                "createLabel": "Create a new InventarioFibras",
+                "title": "Gestionar Inventario Fibras",
+                "createLabel": "Adicionar Lote de Fibra a Inventario",
                 "createOrEditLabel": "Create or edit a InventarioFibras"
             },
             "created": "A new InventarioFibras is created with identifier {{ param }}",
@@ -20,7 +20,8 @@
             "inventarioFinal": "InventarioFinal",
             "costo": "Costo",
             "fibras": "Fibras",
-            "fibrasTelaCruda": "FibrasTelaCruda"
+            "fibrasTelaCruda": "FibrasTelaCruda",
+            "ordenCompra": "orden de Compra"
         }
     }
 }

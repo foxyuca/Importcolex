@@ -20,7 +20,8 @@
             "inventarioFinal": "InventarioFinal",
             "costo": "Costo",
             "fibras": "Fibras",
-            "fibrasTelaCruda": "FibrasTelaCruda"
+            "fibrasTelaCruda": "FibrasTelaCruda",
+            "ordenCompra": "pruchase Order"
         }
     }
 }

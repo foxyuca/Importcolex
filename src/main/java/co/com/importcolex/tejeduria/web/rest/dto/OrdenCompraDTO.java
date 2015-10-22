@@ -13,7 +13,12 @@ import java.util.Objects;
  */
 public class OrdenCompraDTO implements Serializable {
 
-    private Long id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1379622863638729167L;
+
+	private Long id;
 
     private BigDecimal ticket;
 

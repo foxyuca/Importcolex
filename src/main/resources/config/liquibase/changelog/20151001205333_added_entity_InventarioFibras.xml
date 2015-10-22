@@ -44,4 +44,15 @@
                                  referencedTableName="FIBRAS"/>
 
     </changeSet>
+    <changeSet id="20151021165833" author="Victor Perez">
+    	<addColumn tableName="INVENTARIO_FIBRAS">
+    		<column name="orden_compra_id" type="bigint"/>
+    	</addColumn>
+    	<addForeignKeyConstraint constraintName="fk_inventariofibras_ordenCompra_id" 
+    							 referencedTableName="ORDEN_COMPRA" 
+    							 baseColumnNames="orden_compra_id" 
+    							 baseTableName="INVENTARIO_FIBRAS" 
+    							 referencedColumnNames="id"/>
+    
+    </changeSet>
 </databaseChangeLog>

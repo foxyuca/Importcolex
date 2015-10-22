@@ -40,7 +40,7 @@
         </createTable>
         
     </changeSet>
-        <changeSet id="201510012007578" author="Victor Perez">
+    <changeSet id="201510012007578" author="Victor Perez">
     	<addColumn tableName="PROVEEDORES">
     		<column name="tipo_identificacion_id" type="bigint">
                 <constraints nullable="false" />

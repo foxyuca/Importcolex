@@ -19,7 +19,12 @@ import java.util.Objects;
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class InventarioFibras implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3931569821659655200L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -42,6 +47,9 @@ public class InventarioFibras implements Serializable {
 
     @ManyToOne
     private Fibras fibras;
+    
+    @ManyToOne
+    private OrdenCompra ordenCompra;
 
     @OneToMany(mappedBy = "inventarioFibras")
     @JsonIgnore
@@ -103,8 +111,18 @@ public class InventarioFibras implements Serializable {
     public void setFibrasTelaCrudas(Set<FibrasTelaCruda> fibrasTelaCrudas) {
         this.fibrasTelaCrudas = fibrasTelaCrudas;
     }
+    
+    
 
-    @Override
+    public OrdenCompra getOrdenCompra() {
+		return ordenCompra;
+	}
+
+	public void setOrdenCompra(OrdenCompra ordenCompra) {
+		this.ordenCompra = ordenCompra;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

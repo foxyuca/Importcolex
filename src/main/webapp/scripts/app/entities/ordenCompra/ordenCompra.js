@@ -7,7 +7,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/ordenCompras',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                     pageTitle: 'importcolexApp.ordenCompra.home.title'
                 },
                 views: {
@@ -28,7 +28,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/ordenCompra/{id}',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                     pageTitle: 'importcolexApp.ordenCompra.detail.title'
                 },
                 views: {
@@ -51,7 +51,7 @@ angular.module('importcolexApp')
                 parent: 'ordenCompra',
                 url: '/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({
@@ -74,7 +74,7 @@ angular.module('importcolexApp')
                 parent: 'ordenCompra',
                 url: '/{id}/edit',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({

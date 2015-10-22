@@ -3,8 +3,11 @@ package co.com.importcolex.tejeduria.domain;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -19,7 +22,12 @@ import java.util.Objects;
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class OrdenCompra implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1544466302624824323L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
@@ -47,6 +55,11 @@ public class OrdenCompra implements Serializable {
 
     @ManyToOne
     private Fibras fibras;
+    
+    @OneToMany(mappedBy = "ordenCompra")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<InventarioFibras> inventarioFibrass = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -120,7 +133,15 @@ public class OrdenCompra implements Serializable {
         this.fibras = fibras;
     }
 
-    @Override
+    public Set<InventarioFibras> getInventarioFibrass() {
+		return inventarioFibrass;
+	}
+
+	public void setInventarioFibrass(Set<InventarioFibras> inventarioFibrass) {
+		this.inventarioFibrass = inventarioFibrass;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

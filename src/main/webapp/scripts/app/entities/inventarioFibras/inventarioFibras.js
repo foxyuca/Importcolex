@@ -7,7 +7,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/inventarioFibrass',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                     pageTitle: 'importcolexApp.inventarioFibras.home.title'
                 },
                 views: {
@@ -28,7 +28,7 @@ angular.module('importcolexApp')
                 parent: 'entity',
                 url: '/inventarioFibras/{id}',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                     pageTitle: 'importcolexApp.inventarioFibras.detail.title'
                 },
                 views: {
@@ -51,7 +51,7 @@ angular.module('importcolexApp')
                 parent: 'inventarioFibras',
                 url: '/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({
@@ -74,7 +74,7 @@ angular.module('importcolexApp')
                 parent: 'inventarioFibras',
                 url: '/{id}/edit',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_COMPRAS'],
                 },
                 onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
                     $modal.open({

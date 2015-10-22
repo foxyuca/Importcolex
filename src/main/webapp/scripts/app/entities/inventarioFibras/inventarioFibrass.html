@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4">
                 <button class="btn btn-primary" ui-sref="inventarioFibras.new">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="importcolexApp.inventarioFibras.home.createLabel">Create a new InventarioFibras</span>
+                    <span class="glyphicon glyphicon-floppy-saved"></span> <span translate="importcolexApp.inventarioFibras.home.createLabel">Create a new InventarioFibras</span>
                 </button>
             </div>
         </div>
@@ -45,6 +45,7 @@
                     <th translate="importcolexApp.inventarioFibras.inventarioInicial">InventarioInicial</th>
                     <th translate="importcolexApp.inventarioFibras.inventarioFinal">InventarioFinal</th>
                     <th translate="importcolexApp.inventarioFibras.costo">Costo</th>
+                    <th translate="importcolexApp.inventarioFibras.ordenCompra">ordenCompra</th>
                     <th translate="importcolexApp.inventarioFibras.fibras">fibras</th>
                     <th></th>
                 </tr>
@@ -56,6 +57,9 @@
                     <td>{{inventarioFibras.inventarioInicial}}</td>
                     <td>{{inventarioFibras.inventarioFinal}}</td>
                     <td>{{inventarioFibras.costo}}</td>
+                    <td>
+                        <a ui-sref="ordenCompra.detail({id:inventarioFibras.ordenCompraId})">{{inventarioFibras.ordenCompraTicket}}</a>
+                    </td>
                     <td>
                         <a ui-sref="fibras.detail({id:inventarioFibras.fibrasId})">{{inventarioFibras.fibrasNombre}}</a>
                     </td>

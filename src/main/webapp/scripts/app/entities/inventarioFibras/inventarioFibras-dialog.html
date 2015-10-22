@@ -77,7 +77,12 @@
                 </p>
             </div>
         </div>
-
+		<div class="form-group">
+            <label translate="importcolexApp.inventarioFibras.ordenCompra" for="field_ordenCompra">orden de Compra</label>
+            <select class="form-control" id="field_ordenCompra" name="ordenCompra" ng-model="inventarioFibras.ordenCompraId" ng-options="ordenCompra.id as ordenCompra.ticket for ordenCompra in ordenCompra">
+                <option value=""></option>
+            </select>
+        </div>
         <div class="form-group">
             <label translate="importcolexApp.inventarioFibras.fibras" for="field_fibras">fibras</label>
             <select class="form-control" id="field_fibras" name="fibras" ng-model="inventarioFibras.fibrasId" ng-options="fibras.id as fibras.nombre for fibras in fibrass">

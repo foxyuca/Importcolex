@@ -1,10 +1,10 @@
 package co.com.importcolex.tejeduria.web.rest.dto;
 
-import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 /**
@@ -12,7 +12,13 @@ import java.util.Objects;
  */
 public class InventarioFibrasDTO implements Serializable {
 
-    private Long id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1935414256533249090L;
+
+
+	private Long id;
 
     @NotNull
     @Size(max = 50)
@@ -30,6 +36,10 @@ public class InventarioFibrasDTO implements Serializable {
     private Long fibrasId;
 
     private String fibrasNombre;
+    
+    private Long ordenCompraId;
+    
+    private String ordenCompraTicket;
 
     public Long getId() {
         return id;
@@ -86,8 +96,25 @@ public class InventarioFibrasDTO implements Serializable {
     public void setFibrasNombre(String fibrasNombre) {
         this.fibrasNombre = fibrasNombre;
     }
+    
 
-    @Override
+    public Long getOrdenCompraId() {
+		return ordenCompraId;
+	}
+
+	public void setOrdenCompraId(Long ordenCompraId) {
+		this.ordenCompraId = ordenCompraId;
+	}
+
+	public String getOrdenCompraTicket() {
+		return ordenCompraTicket;
+	}
+
+	public void setOrdenCompraTicket(String ordenCompraTicket) {
+		this.ordenCompraTicket = ordenCompraTicket;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
