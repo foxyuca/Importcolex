@@ -2,23 +2,23 @@
     "importcolexApp": {
         "operario" : {
             "home": {
-                "title": "Operarios",
-                "createLabel": "Create a new Operario",
-                "createOrEditLabel": "Create or edit a Operario"
+                "title": "Operator Administration",
+                "createLabel": "Create a new Operator",
+                "createOrEditLabel": "Create or edit a Operator"
             },
-            "created": "A new Operario is created with identifier {{ param }}",
-            "updated": "A Operario is updated with identifier {{ param }}",
-            "deleted": "A Operario is deleted with identifier {{ param }}",
+            "created": "A new Operator is created with identifier {{ param }}",
+            "updated": "A Operator is updated with identifier {{ param }}",
+            "deleted": "A Operator is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Operario {{ id }}?"
+                "question": "Are you sure you want to delete Operator {{ id }}?"
             },
             "detail": {
-                "title": "Operario"
+                "title": "Operator Details"
             },
-            "nombre": "Nombre",
+            "nombre": "Name",
             "turno": "Turno",
-            "referencia": "Referencia",
-            "telaCruda": "TelaCruda"
+            "referencia": "Reference",
+            "telaCruda": "Crude Clothe"
         }
     }
 }

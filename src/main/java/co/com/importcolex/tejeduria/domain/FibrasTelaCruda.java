@@ -29,6 +29,10 @@ public class FibrasTelaCruda implements Serializable {
     @NotNull        
     @Column(name = "peso", nullable = false)
     private Integer peso;
+    
+    @NotNull        
+    @Column(name = "cantidadUsada", nullable = false)
+    private Integer cantidadUsada;
 
     @ManyToOne
     private InventarioFibras inventarioFibras;
@@ -75,8 +79,16 @@ public class FibrasTelaCruda implements Serializable {
     public void setTelaCruda(TelaCruda telaCruda) {
         this.telaCruda = telaCruda;
     }
+    
+    public Integer getCantidadUsada() {
+		return cantidadUsada;
+	}
 
-    @Override
+	public void setCantidadUsada(Integer cantidadUsada) {
+		this.cantidadUsada = cantidadUsada;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

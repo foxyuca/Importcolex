@@ -2,25 +2,25 @@
     "importcolexApp": {
         "maquina" : {
             "home": {
-                "title": "Maquinas",
-                "createLabel": "Create a new Maquina",
-                "createOrEditLabel": "Create or edit a Maquina"
+                "title": "Machine Administration",
+                "createLabel": "Create a new Machine",
+                "createOrEditLabel": "Create or edit a Machine"
             },
-            "created": "A new Maquina is created with identifier {{ param }}",
-            "updated": "A Maquina is updated with identifier {{ param }}",
-            "deleted": "A Maquina is deleted with identifier {{ param }}",
+            "created": "A new Machine is created with identifier {{ param }}",
+            "updated": "A Machine is updated with identifier {{ param }}",
+            "deleted": "A Machine is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Maquina {{ id }}?"
+                "question": "Are you sure you want to delete Machine {{ id }}?"
             },
             "detail": {
-                "title": "Maquina"
+                "title": "Machine Detail"
             },
-            "marca": "Marca",
+            "marca": "Brand",
             "galga": "Galga",
-            "diametro": "Diametro",
+            "diametro": "Diameter",
             "rpm": "Rpm",
-            "agujas": "Agujas",
-            "telaCruda": "TelaCruda"
+            "agujas": "points",
+            "telaCruda": "Crude cloth"
         }
     }
 }

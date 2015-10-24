@@ -1,10 +1,9 @@
 package co.com.importcolex.tejeduria.web.rest.dto;
 
-import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
+
+import javax.validation.constraints.NotNull;
 
 
 /**
@@ -12,14 +11,22 @@ import java.util.Objects;
  */
 public class FibrasTelaCrudaDTO implements Serializable {
 
-    private Long id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8985843524937796596L;
+
+	private Long id;
 
     @NotNull
     private Integer referencia;
 
     @NotNull
     private Integer peso;
-
+    
+    @NotNull
+    private Integer cantidadUsada;
+    
     private Long inventarioFibrasId;
 
     private String inventarioFibrasLote;
@@ -74,7 +81,16 @@ public class FibrasTelaCrudaDTO implements Serializable {
         this.telaCrudaId = telaCrudaId;
     }
 
-    @Override
+
+    public Integer getCantidadUsada() {
+		return cantidadUsada;
+	}
+
+	public void setCantidadUsada(Integer cantidadUsada) {
+		this.cantidadUsada = cantidadUsada;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -95,12 +111,14 @@ public class FibrasTelaCrudaDTO implements Serializable {
         return Objects.hashCode(id);
     }
 
-    @Override
-    public String toString() {
-        return "FibrasTelaCrudaDTO{" +
-                "id=" + id +
-                ", referencia='" + referencia + "'" +
-                ", peso='" + peso + "'" +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "FibrasTelaCrudaDTO [id=" + id + ", referencia=" + referencia
+				+ ", peso=" + peso + ", cantidadUsada=" + cantidadUsada
+				+ ", inventarioFibrasId=" + inventarioFibrasId
+				+ ", inventarioFibrasLote=" + inventarioFibrasLote
+				+ ", telaCrudaId=" + telaCrudaId + "]";
+	}
+
+
 }

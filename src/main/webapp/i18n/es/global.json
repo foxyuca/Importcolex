@@ -6,16 +6,16 @@
             "home": "Inicio",
             "entities": {
                 "main": "Menu Principal",
-                "fibras": "Fibras",
-                "proveedores": "Proveedores",
-                "tipoIdentificacion": "TipoIdentificacion",
+                "fibras": "Administracion de Fibras",
+                "proveedores": "Administracion de proveedores",
+                "tipoIdentificacion": "Administracion de Tipos ID",
                 "ordenCompra": "Gestionar Ordenes Compra",
                 "inventarioFibras": "Gestionar Inventario Fibras",
-                "direccionamientoTela": "DireccionamientoTela",
-                "tipoTela": "TipoTela",
-                "maquina": "Maquina",
-                "operario": "Operario",
-                "clientes": "Clientes",
+                "direccionamientoTela": "Administracion Direccionamiento",
+                "tipoTela": "Administracion Tipos de tela",
+                "maquina": "Administracion de Maquinas",
+                "operario": "Administracion de Operarios",
+                "clientes": "Administracion de Clientes",
                 "telaCruda": "Gestion De tela Cruda",
                 "fibrasTelaCruda": "Asociacion De fibras Tela Cruda",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
@@ -58,8 +58,13 @@
                 "authenticated": "Si desea <a class=\"alert-link\" href=\"#/login\">iniciar una sesión</a>, puede intentar con las cuentas predeterminadas:<br/>- Administrator (usuario=\"admin\" y contraseña=\"admin\") <br/>- Usuario (usuario=\"user\" y contraseña=\"user\").",
                 "register": "¿No tienes una cuenta todavía? <a class=\"alert-link\" href=\"#/register\">Crear una cuenta</a>"
             },
+            "warning": {
+                "verifyQuantityUsed": "ALERTA!: Verifique que la cantidad de inventario usado no sea mayor que la cantidad que existe en bodega"
+                
+            },
             "error": {
-                "dontmatch" : "¡La contraseña y la confirmación no coinciden!"
+                "dontmatch" : "¡La contraseña y la confirmación no coinciden!",
+                "usedQuantityGreater" : "¡La cantidad de fibra usada es mayor a la del inventario en bodega, verifique e intente de nuevo!"
             },
             "validate": {
                 "newpassword": {

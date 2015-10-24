@@ -2,18 +2,18 @@
     "importcolexApp": {
         "operario" : {
             "home": {
-                "title": "Operarios",
-                "createLabel": "Create a new Operario",
-                "createOrEditLabel": "Create or edit a Operario"
+                "title": "Administracion de Operarios",
+                "createLabel": "Crear un Operario nuevo",
+                "createOrEditLabel": "Crear o editar un Operario"
             },
-            "created": "A new Operario is created with identifier {{ param }}",
-            "updated": "A Operario is updated with identifier {{ param }}",
-            "deleted": "A Operario is deleted with identifier {{ param }}",
+            "created": "Un nuevo operario fue creado con el identificador: {{ param }}",
+            "updated": "Un operario fue actualizado con el identificador: {{ param }}",
+            "deleted": "Un operario fue eliminado con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Operario {{ id }}?"
+                "question": "Esta seguro que quiere eliminar el operario: {{ id }}?"
             },
             "detail": {
-                "title": "Operario"
+                "title": "Detalles de Operario"
             },
             "nombre": "Nombre",
             "turno": "Turno",

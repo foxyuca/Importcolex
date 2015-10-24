@@ -40,24 +40,18 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>               
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.clientes.nombre">Nombre</th>
                     <th translate="importcolexApp.clientes.identificacion">Identificacion</th>
                     <th translate="importcolexApp.clientes.telefono">Telefono</th>
                     <th translate="importcolexApp.clientes.correo">Correo</th>
                     <th translate="importcolexApp.clientes.direccion">Direccion</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="clientes in clientess">
-                    <td><a ui-sref="clientes.detail({id:clientes.id})">{{clientes.id}}</a></td>
-                    <td>{{clientes.nombre}}</td>
-                    <td>{{clientes.identificacion}}</td>
-                    <td>{{clientes.telefono}}</td>
-                    <td>{{clientes.correo}}</td>
-                    <td>{{clientes.direccion}}</td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="clientes.detail({id:clientes.id})"
                                 class="btn btn-info btn-sm">
@@ -74,6 +68,13 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="clientes.detail({id:clientes.id})">{{clientes.id}}</a></td>
+                    <td>{{clientes.nombre}}</td>
+                    <td>{{clientes.identificacion}}</td>
+                    <td>{{clientes.telefono}}</td>
+                    <td>{{clientes.correo}}</td>
+                    <td>{{clientes.direccion}}</td>
+                    
                 </tr>
             </tbody>
         </table>

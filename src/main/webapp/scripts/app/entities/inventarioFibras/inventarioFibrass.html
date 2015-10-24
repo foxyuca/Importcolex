@@ -40,6 +40,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                	<th></th>
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.inventarioFibras.lote">Lote</th>
                     <th translate="importcolexApp.inventarioFibras.inventarioInicial">InventarioInicial</th>
@@ -47,23 +48,12 @@
                     <th translate="importcolexApp.inventarioFibras.costo">Costo</th>
                     <th translate="importcolexApp.inventarioFibras.ordenCompra">ordenCompra</th>
                     <th translate="importcolexApp.inventarioFibras.fibras">fibras</th>
-                    <th></th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="inventarioFibras in inventarioFibrass">
-                    <td><a ui-sref="inventarioFibras.detail({id:inventarioFibras.id})">{{inventarioFibras.id}}</a></td>
-                    <td>{{inventarioFibras.lote}}</td>
-                    <td>{{inventarioFibras.inventarioInicial}}</td>
-                    <td>{{inventarioFibras.inventarioFinal}}</td>
-                    <td>{{inventarioFibras.costo}}</td>
-                    <td>
-                        <a ui-sref="ordenCompra.detail({id:inventarioFibras.ordenCompraId})">{{inventarioFibras.ordenCompraTicket}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="fibras.detail({id:inventarioFibras.fibrasId})">{{inventarioFibras.fibrasNombre}}</a>
-                    </td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="inventarioFibras.detail({id:inventarioFibras.id})"
                                 class="btn btn-info btn-sm">
@@ -80,6 +70,18 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="inventarioFibras.detail({id:inventarioFibras.id})">{{inventarioFibras.id}}</a></td>
+                    <td>{{inventarioFibras.lote}}</td>
+                    <td>{{inventarioFibras.inventarioInicial}}</td>
+                    <td>{{inventarioFibras.inventarioFinal}}</td>
+                    <td>{{inventarioFibras.costo}}</td>
+                    <td>
+                        <a ui-sref="ordenCompra.detail({id:inventarioFibras.ordenCompraId})">{{inventarioFibras.ordenCompraTicket}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="fibras.detail({id:inventarioFibras.fibrasId})">{{inventarioFibras.fibrasNombre}}</a>
+                    </td>
+                    
                 </tr>
             </tbody>
         </table>

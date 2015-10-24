@@ -38,6 +38,6 @@ angular.module('importcolexApp')
         };
 
         $scope.clear = function () {
-            $scope.fibrasTelaCruda = {referencia: null, peso: null, id: null};
+            $scope.fibrasTelaCruda = {referencia: null, peso: null, id: null, cantidadUsada: null};
         };
     });

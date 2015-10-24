@@ -40,20 +40,17 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.fibras.nombre">Nombre</th>
                     <th translate="importcolexApp.fibras.titulo">Titulo</th>
                     <th translate="importcolexApp.fibras.filamentos">Filamentos</th>
-                    <th></th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="fibras in fibrass">
-                    <td><a ui-sref="fibras.detail({id:fibras.id})">{{fibras.id}}</a></td>
-                    <td>{{fibras.nombre}}</td>
-                    <td>{{fibras.titulo}}</td>
-                    <td>{{fibras.filamentos}}</td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="fibras.detail({id:fibras.id})"
                                 class="btn btn-info btn-sm">
@@ -70,6 +67,11 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="fibras.detail({id:fibras.id})">{{fibras.id}}</a></td>
+                    <td>{{fibras.nombre}}</td>
+                    <td>{{fibras.titulo}}</td>
+                    <td>{{fibras.filamentos}}</td>
+                    
                 </tr>
             </tbody>
         </table>

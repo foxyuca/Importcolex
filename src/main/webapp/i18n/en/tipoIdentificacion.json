@@ -2,21 +2,21 @@
     "importcolexApp": {
         "tipoIdentificacion" : {
             "home": {
-                "title": "TipoIdentificacions",
-                "createLabel": "Create a new TipoIdentificacion",
-                "createOrEditLabel": "Create or edit a TipoIdentificacion"
+                "title": "Id types Administration",
+                "createLabel": "Create a new Id type",
+                "createOrEditLabel": "Create or edit an Id type"
             },
-            "created": "A new TipoIdentificacion is created with identifier {{ param }}",
-            "updated": "A TipoIdentificacion is updated with identifier {{ param }}",
-            "deleted": "A TipoIdentificacion is deleted with identifier {{ param }}",
+            "created": "A new Id type is created with identifier {{ param }}",
+            "updated": "A Id type is updated with identifier {{ param }}",
+            "deleted": "A Id type is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete TipoIdentificacion {{ id }}?"
+                "question": "Are you sure you want to delete Id type {{ id }}?"
             },
             "detail": {
-                "title": "TipoIdentificacion"
+                "title": "Id type Details"
             },
-            "nombre": "Nombre",
-            "proveedores": "Proveedores"
+            "nombre": "name",
+            "proveedores": "Providers"
         }
     }
 }

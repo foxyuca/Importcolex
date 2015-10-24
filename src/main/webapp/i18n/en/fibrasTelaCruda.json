@@ -2,23 +2,24 @@
     "importcolexApp": {
         "fibrasTelaCruda" : {
             "home": {
-                "title": "FibrasTelaCrudas",
-                "createLabel": "Create a new FibrasTelaCruda",
-                "createOrEditLabel": "Create or edit a FibrasTelaCruda"
+                "title": "Fiber Association to crude Cloth",
+                "createLabel": "Create a new Association between Fiber and cloth",
+                "createOrEditLabel": "Create or edit a Fiber Association to crude Cloth"
             },
-            "created": "A new FibrasTelaCruda is created with identifier {{ param }}",
-            "updated": "A FibrasTelaCruda is updated with identifier {{ param }}",
-            "deleted": "A FibrasTelaCruda is deleted with identifier {{ param }}",
+            "created": "A new Fiber Association to crude Cloth is created with identifier {{ param }}",
+            "updated": "A Fiber Association to crude Cloth is updated with identifier {{ param }}",
+            "deleted": "A Fiber Association to crude Cloth is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete FibrasTelaCruda {{ id }}?"
+                "question": "Are you sure you want to delete Fiber Association to crude Cloth {{ id }}?"
             },
             "detail": {
-                "title": "FibrasTelaCruda"
+                "title": "Fiber Association to crude Cloth Detail"
             },
-            "referencia": "Referencia",
-            "peso": "Peso",
-            "inventarioFibras": "InventarioFibras",
-            "telaCruda": "TelaCruda"
+            "referencia": "Reference",
+            "peso": "Weight",
+            "inventarioFibras": "Fiber inventory",
+            "cantidadUsada": "Inventory Quantity used",
+            "telaCruda": "Crude cloth"
         }
     }
 }

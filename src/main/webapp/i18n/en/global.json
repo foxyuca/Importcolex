@@ -6,18 +6,18 @@
             "home": "Home",
             "entities": {
                 "main": "Main Menu",
-                "fibras": "Fibras",
-                "proveedores": "Proveedores",
-                "tipoIdentificacion": "TipoIdentificacion",
-                "ordenCompra": "OrdenCompra",
-                "inventarioFibras": "InventarioFibras",
-                "direccionamientoTela": "DireccionamientoTela",
-                "tipoTela": "TipoTela",
-                "maquina": "Maquina",
-                "operario": "Operario",
-                "clientes": "Clientes",
-                "telaCruda": "TelaCruda",
-                "fibrasTelaCruda": "FibrasTelaCruda",
+                "fibras": "Fiber Administration",
+                "proveedores": "Providers Administration",
+                "tipoIdentificacion": "Id Type Administration",
+                "ordenCompra": "Purchase Order manager",
+                "inventarioFibras": "Fiber Inventory Manager",
+                "direccionamientoTela": "Cloth Pointer Administration",
+                "tipoTela": "Cloth Types Administration",
+                "maquina": "Machines Administration",
+                "operario": "Operator Administration",
+                "clientes": "Customer Administration",
+                "telaCruda": "Crude Cloth Manager",
+                "fibrasTelaCruda": "Fiber by Crude Cloth Association",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -58,8 +58,13 @@
                 "authenticated": "If you want to <a class=\"alert-link\" href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
                 "register": "You don't have an account yet? <a class=\"alert-link\" href=\"#/register\">Register a new account</a>"
             },
+            "warning": {
+                "verifyQuantityUsed": "WARNING!: Please Verify the quantity used, It souldn't be greater than the quantity in the warehouse"
+                
+            },
             "error": {
-                "dontmatch": "The password and its confirmation do not match!"
+                "dontmatch": "The password and its confirmation do not match!",
+                "usedQuantityGreater" : "¡The Fiber Quantity used is greater than the inventory in the warehouse, please verify!"
             },
             "validate": {
                 "newpassword": {

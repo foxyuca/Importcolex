@@ -1,12 +1,16 @@
 package co.com.importcolex.tejeduria.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
 import co.com.importcolex.tejeduria.domain.FibrasTelaCruda;
+import co.com.importcolex.tejeduria.domain.InventarioFibras;
 import co.com.importcolex.tejeduria.repository.FibrasTelaCrudaRepository;
+import co.com.importcolex.tejeduria.repository.InventarioFibrasRepository;
 import co.com.importcolex.tejeduria.web.rest.util.HeaderUtil;
 import co.com.importcolex.tejeduria.web.rest.util.PaginationUtil;
 import co.com.importcolex.tejeduria.web.rest.dto.FibrasTelaCrudaDTO;
 import co.com.importcolex.tejeduria.web.rest.mapper.FibrasTelaCrudaMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -20,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.LinkedList;
@@ -38,6 +43,9 @@ public class FibrasTelaCrudaResource {
 
     @Inject
     private FibrasTelaCrudaRepository fibrasTelaCrudaRepository;
+    
+    @Inject
+    private InventarioFibrasRepository inventarioFibrasRepository ;
 
     @Inject
     private FibrasTelaCrudaMapper fibrasTelaCrudaMapper;
@@ -54,8 +62,17 @@ public class FibrasTelaCrudaResource {
         if (fibrasTelaCrudaDTO.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new fibrasTelaCruda cannot already have an ID").body(null);
         }
+        fibrasTelaCrudaDTO.toString();
         FibrasTelaCruda fibrasTelaCruda = fibrasTelaCrudaMapper.fibrasTelaCrudaDTOToFibrasTelaCruda(fibrasTelaCrudaDTO);
         FibrasTelaCruda result = fibrasTelaCrudaRepository.save(fibrasTelaCruda);
+        InventarioFibras inventarioFibras = inventarioFibrasRepository.findOne(result.getInventarioFibras().getId());
+        System.out.println("RRRRRRRRRRRRRRRRRRRRRRRRRRRRR"+inventarioFibras.toString());
+        if (inventarioFibras.getInventarioFinal() == inventarioFibras.getInventarioInicial()) {
+        	inventarioFibras.setInventarioFinal(inventarioFibras.getInventarioInicial() - fibrasTelaCrudaDTO.getCantidadUsada());
+		}else{
+			inventarioFibras.setInventarioFinal(inventarioFibras.getInventarioFinal() - fibrasTelaCrudaDTO.getCantidadUsada());
+		}
+        inventarioFibrasRepository.save(inventarioFibras);
         return ResponseEntity.created(new URI("/api/fibrasTelaCrudas/" + result.getId()))
                 .headers(HeaderUtil.createEntityCreationAlert("fibrasTelaCruda", result.getId().toString()))
                 .body(fibrasTelaCrudaMapper.fibrasTelaCrudaToFibrasTelaCrudaDTO(result));
@@ -75,6 +92,13 @@ public class FibrasTelaCrudaResource {
         }
         FibrasTelaCruda fibrasTelaCruda = fibrasTelaCrudaMapper.fibrasTelaCrudaDTOToFibrasTelaCruda(fibrasTelaCrudaDTO);
         FibrasTelaCruda result = fibrasTelaCrudaRepository.save(fibrasTelaCruda);
+        InventarioFibras inventarioFibras = fibrasTelaCruda.getInventarioFibras();
+        if (inventarioFibras.getInventarioFinal() == inventarioFibras.getInventarioInicial()) {
+        	inventarioFibras.setInventarioFinal(inventarioFibras.getInventarioInicial() - fibrasTelaCruda.getCantidadUsada());
+		}else{
+			inventarioFibras.setInventarioFinal(inventarioFibras.getInventarioFinal() - fibrasTelaCruda.getCantidadUsada());
+		}
+        inventarioFibrasRepository.save(inventarioFibras);
         return ResponseEntity.ok()
                 .headers(HeaderUtil.createEntityUpdateAlert("fibrasTelaCruda", fibrasTelaCrudaDTO.getId().toString()))
                 .body(fibrasTelaCrudaMapper.fibrasTelaCrudaToFibrasTelaCrudaDTO(result));

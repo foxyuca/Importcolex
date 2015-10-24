@@ -40,26 +40,19 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.fibrasTelaCruda.referencia">Referencia</th>
                     <th translate="importcolexApp.fibrasTelaCruda.peso">Peso</th>
                     <th translate="importcolexApp.fibrasTelaCruda.inventarioFibras">inventarioFibras</th>
+                    <th translate="importcolexApp.fibrasTelaCruda.cantidadUsada">cantidad de inv usada para tela</th>
                     <th translate="importcolexApp.fibrasTelaCruda.telaCruda">telaCruda</th>
-                    <th></th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="fibrasTelaCruda in fibrasTelaCrudas">
-                    <td><a ui-sref="fibrasTelaCruda.detail({id:fibrasTelaCruda.id})">{{fibrasTelaCruda.id}}</a></td>
-                    <td>{{fibrasTelaCruda.referencia}}</td>
-                    <td>{{fibrasTelaCruda.peso}}</td>
-                    <td>
-                        <a ui-sref="inventarioFibras.detail({id:fibrasTelaCruda.inventarioFibrasId})">{{fibrasTelaCruda.inventarioFibrasLote}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="telaCruda.detail({id:fibrasTelaCruda.telaCrudaId})">{{fibrasTelaCruda.telaCrudaId}}</a>
-                    </td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="fibrasTelaCruda.detail({id:fibrasTelaCruda.id})"
                                 class="btn btn-info btn-sm">
@@ -76,6 +69,17 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="fibrasTelaCruda.detail({id:fibrasTelaCruda.id})">{{fibrasTelaCruda.id}}</a></td>
+                    <td>{{fibrasTelaCruda.referencia}}</td>
+                    <td>{{fibrasTelaCruda.peso}}</td>
+                    <td>
+                        <a ui-sref="inventarioFibras.detail({id:fibrasTelaCruda.inventarioFibrasId})">{{fibrasTelaCruda.inventarioFibrasLote}}</a>
+                    </td>
+                     <td>{{fibrasTelaCruda.cantidadUsada}}</td>
+                    <td>
+                        <a ui-sref="telaCruda.detail({id:fibrasTelaCruda.telaCrudaId})">{{fibrasTelaCruda.telaCrudaId}}</a>
+                    </td>
+                    
                 </tr>
             </tbody>
         </table>

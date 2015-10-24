@@ -23,6 +23,36 @@ angular.module('importcolexApp')
                     }]
                 }
             })
+            .state('user-management.new', {
+                parent: 'admin',
+                url: '/new',
+                data: {
+                    authorities: ['ROLE_ADMIN'],
+                    pageTitle: 'user-management.home.title'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/admin/user-management/user-management-dialog.html',
+                        controller: 'UserManagementDialogController'
+                    }
+                },
+                onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
+                    $modal.open({
+                        templateUrl: 'scripts/app/admin/user-management/user-management-detail.html',
+                        controller: 'UserManagementDetailController',
+                        size: 'lg',
+                        resolve: {
+                            entity: function () {
+                                return {login: null, firstName: null, lastName: null, email: null, langKey: null, id: null};
+                            }
+                        }
+                    }).result.then(function(result) {
+                        $state.go('user-management', null, { reload: true });
+                    }, function() {
+                        $state.go('user-management');
+                    })
+                }]
+            })
             .state('user-management-detail', {
                 parent: 'admin',
                 url: '/user-management/:login',

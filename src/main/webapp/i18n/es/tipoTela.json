@@ -2,22 +2,22 @@
     "importcolexApp": {
         "tipoTela" : {
             "home": {
-                "title": "TipoTelas",
-                "createLabel": "Create a new TipoTela",
-                "createOrEditLabel": "Create or edit a TipoTela"
+                "title": "Administracion de Tipos de tela",
+                "createLabel": "Crear un tipo de tela nuevo",
+                "createOrEditLabel": "Crear o editar un tipo de tela"
             },
-            "created": "A new TipoTela is created with identifier {{ param }}",
-            "updated": "A TipoTela is updated with identifier {{ param }}",
-            "deleted": "A TipoTela is deleted with identifier {{ param }}",
+            "created": "Un  tipo de tela fue creado con el identificador: {{ param }}",
+            "updated": "Un Tipo de tela fue actualizado con el identificador: {{ param }}",
+            "deleted": "Un tipo de tela fue eliminado con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete TipoTela {{ id }}?"
+                "question": "Esta seguro que quiere eliminar el tipo de tela: {{ id }}?"
             },
             "detail": {
-                "title": "TipoTela"
+                "title": "Detalle de Tipo Tela"
             },
             "nombre": "Nombre",
-            "direccionamientoTela": "DireccionamientoTela",
-            "telaCruda": "TelaCruda"
+            "direccionamientoTela": "Direccionamiento Tela",
+            "telaCruda": "Tela Cruda"
         }
     }
 }

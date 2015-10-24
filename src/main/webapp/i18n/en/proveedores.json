@@ -2,26 +2,26 @@
     "importcolexApp": {
         "proveedores" : {
             "home": {
-                "title": "Proveedoress",
-                "createLabel": "Create a new Proveedores",
-                "createOrEditLabel": "Create or edit a Proveedores"
+                "title": "Providers Administration",
+                "createLabel": "Create a new Provider",
+                "createOrEditLabel": "Create or edit a Provider"
             },
-            "created": "A new Proveedores is created with identifier {{ param }}",
-            "updated": "A Proveedores is updated with identifier {{ param }}",
-            "deleted": "A Proveedores is deleted with identifier {{ param }}",
+            "created": "A new Provider is created with identifier {{ param }}",
+            "updated": "A Provider is updated with identifier {{ param }}",
+            "deleted": "A Provider is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Proveedores {{ id }}?"
+                "question": "Are you sure you want to delete Provider {{ id }}?"
             },
             "detail": {
-                "title": "Proveedores"
+                "title": "Provider Detail"
             },
-            "nombre": "Nombre",
-            "identificacion": "Identificacion",
+            "nombre": "Name",
+            "identificacion": "Identification",
             "tipoIdentificacion": "Id Type",
-            "direccion": "Direccion",
-            "telefono": "Telefono",
+            "direccion": "Address",
+            "telefono": "Phone",
             "email": "Email",
-            "ordencompra": "Ordencompra"
+            "ordencompra": "purchase Order"
         }
     }
 }

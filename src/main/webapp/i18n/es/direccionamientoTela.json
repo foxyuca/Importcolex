@@ -2,18 +2,18 @@
     "importcolexApp": {
         "direccionamientoTela" : {
             "home": {
-                "title": "DireccionamientoTelas",
-                "createLabel": "Create a new DireccionamientoTela",
-                "createOrEditLabel": "Create or edit a DireccionamientoTela"
+                "title": "Administracion de Direccionamiento de Telas",
+                "createLabel": "Crear un Direccionamiento de tela nuevo",
+                "createOrEditLabel": "Crear o editar un direccionamiento de tela"
             },
-            "created": "A new DireccionamientoTela is created with identifier {{ param }}",
-            "updated": "A DireccionamientoTela is updated with identifier {{ param }}",
-            "deleted": "A DireccionamientoTela is deleted with identifier {{ param }}",
+            "created": "Un Direccionamiento de tela nuevo fue creado con el identificador: {{ param }}",
+            "updated": "El Direccionamiento de tela fue actualizado con el identificador: {{ param }}",
+            "deleted": "El Direccionamiento de tela fue eliminado con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete DireccionamientoTela {{ id }}?"
+                "question": "Esta seguro que quiere eliminar el direccionamiento de tela: {{ id }}?"
             },
             "detail": {
-                "title": "DireccionamientoTela"
+                "title": "Detalle de Direccionamiento de Tela"
             },
             "nombre": "Nombre",
             "tipoTela": "TipoTela"

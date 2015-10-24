@@ -2,22 +2,22 @@
     "importcolexApp": {
         "tipoTela" : {
             "home": {
-                "title": "TipoTelas",
-                "createLabel": "Create a new TipoTela",
-                "createOrEditLabel": "Create or edit a TipoTela"
+                "title": "Clothes Type Administration",
+                "createLabel": "Create a new Clothe Type",
+                "createOrEditLabel": "Create or edit a Clothe Type"
             },
-            "created": "A new TipoTela is created with identifier {{ param }}",
-            "updated": "A TipoTela is updated with identifier {{ param }}",
-            "deleted": "A TipoTela is deleted with identifier {{ param }}",
+            "created": "A new Clothe Type is created with identifier {{ param }}",
+            "updated": "A Clothe Type is updated with identifier {{ param }}",
+            "deleted": "A Clothe Type is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete TipoTela {{ id }}?"
+                "question": "Are you sure you want to delete Clothe Type {{ id }}?"
             },
             "detail": {
-                "title": "TipoTela"
+                "title": "Clothes Type Detail"
             },
-            "nombre": "Nombre",
-            "direccionamientoTela": "DireccionamientoTela",
-            "telaCruda": "TelaCruda"
+            "nombre": "Name",
+            "direccionamientoTela": "Clothes Pointer",
+            "telaCruda": "Crude Cloth"
         }
     }
 }

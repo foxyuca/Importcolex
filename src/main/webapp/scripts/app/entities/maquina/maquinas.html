@@ -40,24 +40,18 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>                
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.maquina.marca">Marca</th>
                     <th translate="importcolexApp.maquina.galga">Galga</th>
                     <th translate="importcolexApp.maquina.diametro">Diametro</th>
                     <th translate="importcolexApp.maquina.rpm">Rpm</th>
                     <th translate="importcolexApp.maquina.agujas">Agujas</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="maquina in maquinas">
-                    <td><a ui-sref="maquina.detail({id:maquina.id})">{{maquina.id}}</a></td>
-                    <td>{{maquina.marca}}</td>
-                    <td>{{maquina.galga}}</td>
-                    <td>{{maquina.diametro}}</td>
-                    <td>{{maquina.rpm}}</td>
-                    <td>{{maquina.agujas}}</td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="maquina.detail({id:maquina.id})"
                                 class="btn btn-info btn-sm">
@@ -74,6 +68,12 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="maquina.detail({id:maquina.id})">{{maquina.id}}</a></td>
+                    <td>{{maquina.marca}}</td>
+                    <td>{{maquina.galga}}</td>
+                    <td>{{maquina.diametro}}</td>
+                    <td>{{maquina.rpm}}</td>
+                    <td>{{maquina.agujas}}</td>               
                 </tr>
             </tbody>
         </table>

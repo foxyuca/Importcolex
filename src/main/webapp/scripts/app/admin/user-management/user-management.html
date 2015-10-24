@@ -1,6 +1,16 @@
 <div>
-    <div class="row">
+	<div class="row">
         <h2 class="col-sm-6" translate="user-management.home.title">Users</h2>
+    </div>
+	<jh-alert></jh-alert>
+	<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="user-management.new">
+                    <span class="glyphicon glyphicon-user"></span> <span translate="user-management.home.createLabel">Create a new User</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="saveUserModal" tabindex="-1" role="dialog" aria-labelledby="myUserLabel"
@@ -155,6 +165,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
+            	<th></th>
                 <th translate="global.field.id">ID</th>
                 <th translate="user-management.login">Login</th>
                 <th translate="user-management.email">Email</th>
@@ -163,12 +174,23 @@
                 <th translate="user-management.profiles">Profiles</th>
                 <th translate="user-management.createdDate">CreatedDate</th>
                 <th translate="user-management.lastModifiedBy">LastModifiedBy</th>
-                <th translate="user-management.lastModifiedDate">LastModifiedDate</th>
-                <th></th>
+                <th translate="user-management.lastModifiedDate">LastModifiedDate</th>               
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="user in users">
+            	<td class="text-right">
+                    <button type="submit"
+                            ui-sref="user-management-detail({login:user.login})"
+                            class="btn btn-info btn-sm">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </button>
+                    <button type="submit"
+                            ng-click="showUpdate(user.login)"
+                            class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </td>
                 <td><a ui-sref="user-management-detail({login:user.login})">{{user.id}}</a></td>
                 <td>{{user.login}}</td>
                 <td>{{user.email}}</td>
@@ -187,18 +209,7 @@
                 <td>{{user.createdDate | date:'dd/MM/yy HH:mm'}}</td>
                 <td>{{user.lastModifiedBy}}</td>
                 <td>{{user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}</td>
-                <td class="text-right">
-                    <button type="submit"
-                            ui-sref="user-management-detail({login:user.login})"
-                            class="btn btn-info btn-sm">
-                        <span class="glyphicon glyphicon-eye-open"></span>
-                    </button>
-                    <button type="submit"
-                            ng-click="showUpdate(user.login)"
-                            class="btn btn-primary btn-sm">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                </td>
+                
             </tr>
             </tbody>
         </table>

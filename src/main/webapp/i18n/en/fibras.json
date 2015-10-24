@@ -2,24 +2,24 @@
     "importcolexApp": {
         "fibras" : {
             "home": {
-                "title": "Fibrass",
-                "createLabel": "Create a new Fibras",
-                "createOrEditLabel": "Create or edit a Fibras"
+                "title": "Fiber Administration",
+                "createLabel": "Create a new Fiber",
+                "createOrEditLabel": "Create or edit a Fiber"
             },
-            "created": "A new Fibras is created with identifier {{ param }}",
-            "updated": "A Fibras is updated with identifier {{ param }}",
-            "deleted": "A Fibras is deleted with identifier {{ param }}",
+            "created": "A new Fiber is created with identifier {{ param }}",
+            "updated": "A Fiber is updated with identifier {{ param }}",
+            "deleted": "A Fiber is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Fibras {{ id }}?"
+                "question": "Are you sure you want to delete Fiber {{ id }}?"
             },
             "detail": {
-                "title": "Fibras"
+                "title": "Fiber Details"
             },
-            "nombre": "Nombre",
-            "titulo": "Titulo",
-            "filamentos": "Filamentos",
-            "ordenCompra": "OrdenCompra",
-            "inventarioFibras": "InventarioFibras"
+            "nombre": "Name",
+            "titulo": "Title",
+            "filamentos": "Filaments",
+            "ordenCompra": "Purchase Order",
+            "inventarioFibras": "Fiber Inventory"
         }
     }
 }

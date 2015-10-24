@@ -40,20 +40,15 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>               
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.tipoTela.nombre">Nombre</th>
                     <th translate="importcolexApp.tipoTela.direccionamientoTela">direccionamientoTela</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="tipoTela in tipoTelas">
-                    <td><a ui-sref="tipoTela.detail({id:tipoTela.id})">{{tipoTela.id}}</a></td>
-                    <td>{{tipoTela.nombre}}</td>
-                    <td>
-                        <a ui-sref="direccionamientoTela.detail({id:tipoTela.direccionamientoTelaId})">{{tipoTela.direccionamientoTelaNombre}}</a>
-                    </td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="tipoTela.detail({id:tipoTela.id})"
                                 class="btn btn-info btn-sm">
@@ -69,6 +64,11 @@
                                 class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
+                    </td>
+                    <td><a ui-sref="tipoTela.detail({id:tipoTela.id})">{{tipoTela.id}}</a></td>
+                    <td>{{tipoTela.nombre}}</td>
+                    <td>
+                        <a ui-sref="direccionamientoTela.detail({id:tipoTela.direccionamientoTelaId})">{{tipoTela.direccionamientoTelaNombre}}</a>
                     </td>
                 </tr>
             </tbody>

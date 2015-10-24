@@ -43,6 +43,23 @@
                                  constraintName="fk_fibrastelacruda_telacruda_id"
                                  referencedColumnNames="id"
                                  referencedTableName="TELA_CRUDA"/>
-
+    </changeSet>
+    <changeSet id="20151022100702" author="Victor Perez">
+    	<addColumn tableName="INVENTARIO_FIBRAS">
+    		<column name="cantidad_usada" type="integer" defaultValue="0">
+                <constraints nullable="false"/>
+                
+            </column>
+    	</addColumn>  
+    </changeSet>
+    <changeSet id="20151022100703" author="Victor Perez">
+    	<dropColumn tableName="INVENTARIO_FIBRAS">
+    		<column name="cantidad_usada"></column>
+    	</dropColumn> 
+    	<addColumn tableName="FIBRAS_TELA_CRUDA">
+    		<column name="cantidad_usada" type="integer" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>  
     </changeSet>
 </databaseChangeLog>

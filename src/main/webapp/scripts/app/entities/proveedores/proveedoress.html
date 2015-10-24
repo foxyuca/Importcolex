@@ -40,6 +40,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th></th>                
                     <th translate="global.field.id">ID</th>
                     <th translate="importcolexApp.proveedores.nombre">Nombre</th>
                     <th translate="importcolexApp.proveedores.tipoIdentificacion">Tipo Identificacion</th>
@@ -47,21 +48,12 @@
                     <th translate="importcolexApp.proveedores.direccion">Direccion</th>
                     <th translate="importcolexApp.proveedores.telefono">Telefono</th>
                     <th translate="importcolexApp.proveedores.email">Email</th>
-                    <th></th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="proveedores in proveedoress">
-                    <td><a ui-sref="proveedores.detail({id:proveedores.id})">{{proveedores.id}}</a></td>
-                    <td>{{proveedores.nombre}}</td>
-                    <td>
-                        <a ui-sref="tipoIdentificacion.detail({id:proveedores.tipoIdentificacionId})">{{proveedores.tipoIdentificacionNombre}}</a>
-                    </td>
-                    <td>{{proveedores.identificacion}}</td>
-                    <td>{{proveedores.direccion}}</td>
-                    <td>{{proveedores.telefono}}</td>
-                    <td>{{proveedores.email}}</td>
-                    <td>
+                	<td>
                         <button type="submit"
                                 ui-sref="proveedores.detail({id:proveedores.id})"
                                 class="btn btn-info btn-sm">
@@ -78,6 +70,16 @@
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
+                    <td><a ui-sref="proveedores.detail({id:proveedores.id})">{{proveedores.id}}</a></td>
+                    <td>{{proveedores.nombre}}</td>
+                    <td>
+                        <a ui-sref="tipoIdentificacion.detail({id:proveedores.tipoIdentificacionId})">{{proveedores.tipoIdentificacionNombre}}</a>
+                    </td>
+                    <td>{{proveedores.identificacion}}</td>
+                    <td>{{proveedores.direccion}}</td>
+                    <td>{{proveedores.telefono}}</td>
+                    <td>{{proveedores.email}}</td>
+                    
                 </tr>
             </tbody>
         </table>

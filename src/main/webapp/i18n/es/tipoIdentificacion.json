@@ -2,18 +2,18 @@
     "importcolexApp": {
         "tipoIdentificacion" : {
             "home": {
-                "title": "TipoIdentificacions",
-                "createLabel": "Create a new TipoIdentificacion",
-                "createOrEditLabel": "Create or edit a TipoIdentificacion"
+                "title": "Administracion de Tipos de identificacion",
+                "createLabel": "Crear un tipo de identificacion nuevo",
+                "createOrEditLabel": "Crear o editar un Tipo de Identificacion"
             },
-            "created": "A new TipoIdentificacion is created with identifier {{ param }}",
-            "updated": "A TipoIdentificacion is updated with identifier {{ param }}",
-            "deleted": "A TipoIdentificacion is deleted with identifier {{ param }}",
+            "created": "Un tipo de identificacion nuefo fue creado con el identificador: {{ param }}",
+            "updated": "El tipo de identificacion fue actualizado con el identificador: {{ param }}",
+            "deleted": "El tipo de identificacion fue eliminado con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete TipoIdentificacion {{ id }}?"
+                "question": "Esta seguro que quiere eliminar el tipo de identificacion: {{ id }}?"
             },
             "detail": {
-                "title": "TipoIdentificacion"
+                "title": "Detalle de tipo de identificacion"
             },
             "nombre": "Nombre",
             "proveedores": "Proveedores"

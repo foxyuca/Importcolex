@@ -2,18 +2,18 @@
     "importcolexApp": {
         "proveedores" : {
             "home": {
-                "title": "Proveedoress",
-                "createLabel": "Create a new Proveedores",
-                "createOrEditLabel": "Create or edit a Proveedores"
+                "title": "Administracion de proveedores",
+                "createLabel": "Crear un Proveedor nuevo",
+                "createOrEditLabel": "Crear o editar un Proveedor"
             },
-            "created": "A new Proveedores is created with identifier {{ param }}",
-            "updated": "A Proveedores is updated with identifier {{ param }}",
-            "deleted": "A Proveedores is deleted with identifier {{ param }}",
+            "created": "Un nuevo proveedor fue creado con el identificador: {{ param }}",
+            "updated": "El proveedor fue actualizado con el identificador {{ param }}",
+            "deleted": "El proveedor fue borrado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Proveedores {{ id }}?"
+                "question": "Esta seguro que quiere borrar el proveedor con el identificador {{ id }}?"
             },
             "detail": {
-                "title": "Proveedores"
+                "title": "Detalle de proveedor"
             },
             "nombre": "Nombre",
             "identificacion": "Identificacion",

@@ -60,7 +60,7 @@ angular.module('importcolexApp')
                         size: 'lg',
                         resolve: {
                             entity: function () {
-                                return {referencia: null, peso: null, id: null};
+                                return {referencia: null, peso: null, id: null, cantidadUsada: null};
                             }
                         }
                     }).result.then(function(result) {

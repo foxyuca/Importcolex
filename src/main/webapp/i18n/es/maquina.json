@@ -2,18 +2,18 @@
     "importcolexApp": {
         "maquina" : {
             "home": {
-                "title": "Maquinas",
-                "createLabel": "Create a new Maquina",
-                "createOrEditLabel": "Create or edit a Maquina"
+                "title": "Administracion de Maquinas",
+                "createLabel": "Crear una Maquina nueva",
+                "createOrEditLabel": "Crear o editar una Maquina"
             },
-            "created": "A new Maquina is created with identifier {{ param }}",
-            "updated": "A Maquina is updated with identifier {{ param }}",
-            "deleted": "A Maquina is deleted with identifier {{ param }}",
+            "created": "Una maquina fue creada con el identificador: {{ param }}",
+            "updated": "Una maquina fue actualizada con el identificador: {{ param }}",
+            "deleted": "Una maquina fue eliminada con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Maquina {{ id }}?"
+                "question": "Esta seguro que quiere eliminar la maquina: {{ id }}?"
             },
             "detail": {
-                "title": "Maquina"
+                "title": "Detalle de maquina"
             },
             "marca": "Marca",
             "galga": "Galga",

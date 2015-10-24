@@ -2,18 +2,18 @@
     "importcolexApp": {
         "clientes" : {
             "home": {
-                "title": "Clientess",
-                "createLabel": "Create a new Clientes",
-                "createOrEditLabel": "Create or edit a Clientes"
+                "title": "Administracion de Clientes",
+                "createLabel": "Crear un cliente nuevo",
+                "createOrEditLabel": "Crear o editar un Cliente"
             },
-            "created": "A new Clientes is created with identifier {{ param }}",
-            "updated": "A Clientes is updated with identifier {{ param }}",
-            "deleted": "A Clientes is deleted with identifier {{ param }}",
+            "created": "Un cliente fue creado con el identificador: {{ param }}",
+            "updated": "Un cliente fue actualizado con el identificador: {{ param }}",
+            "deleted": "Un cliente fue eliminado con el identificador: {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Clientes {{ id }}?"
+                "question": "Esta seguro que quiere eliminar el Cliente: {{ id }}?"
             },
             "detail": {
-                "title": "Clientes"
+                "title": "Detalle de cliente"
             },
             "nombre": "Nombre",
             "identificacion": "Identificacion",

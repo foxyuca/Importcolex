@@ -3,26 +3,26 @@
         "ordenCompra" : {
             "home": {
                 "title": "Purchase Order Manager",
-                "createLabel": "Create a new OrdenCompra",
-                "createOrEditLabel": "Create or edit a OrdenCompra"
+                "createLabel": "Create a new Purchase Order",
+                "createOrEditLabel": "Create or edit a Purchase Order"
             },
-            "created": "A new OrdenCompra is created with identifier {{ param }}",
-            "updated": "A OrdenCompra is updated with identifier {{ param }}",
-            "deleted": "A OrdenCompra is deleted with identifier {{ param }}",
+            "created": "A new Purchase Order is created with identifier {{ param }}",
+            "updated": "A Purchase Order is updated with identifier {{ param }}",
+            "deleted": "A Purchase Order is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete OrdenCompra {{ id }}?"
+                "question": "Are you sure you want to delete Purchase Order {{ id }}?"
             },
             "detail": {
-                "title": "Purchase Order Manager"
+                "title": "Purchase Order Detail"
             },
             "ticket": "Ticket",
-            "cantidad": "Cantidad",
-            "costo": "Costo",
-            "aprovada": "Aprobada",
-            "ordenada": "Ordenada",
-            "recibida": "Recibida",
-            "proveedores": "Proveedores",
-            "fibras": "Fibras"
+            "cantidad": "Quantity",
+            "costo": "Cost",
+            "aprovada": "Approved",
+            "ordenada": "Ordered",
+            "recibida": "Received",
+            "proveedores": "Providers",
+            "fibras": "Fibers"
         }
     }
 }

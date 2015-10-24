@@ -2,32 +2,32 @@
     "importcolexApp": {
         "telaCruda" : {
             "home": {
-                "title": "TelaCrudas",
-                "createLabel": "Create a new TelaCruda",
-                "createOrEditLabel": "Create or edit a TelaCruda",
+                "title": "Crude Cloths Manager",
+                "createLabel": "Create a new Crude Cloth",
+                "createOrEditLabel": "Create or edit a Crude Cloth",
                 "asociarFibras": "Asociate Fiber to Crude Cloth"
             },
-            "created": "A new TelaCruda is created with identifier {{ param }}",
-            "updated": "A TelaCruda is updated with identifier {{ param }}",
-            "deleted": "A TelaCruda is deleted with identifier {{ param }}",
+            "created": "A new Crude Cloth is created with identifier {{ param }}",
+            "updated": "A Crude Cloth is updated with identifier {{ param }}",
+            "deleted": "A Crude Cloth is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete TelaCruda {{ id }}?"
+                "question": "Are you sure you want to delete Crude Cloth {{ id }}?"
             },
             "detail": {
-                "title": "TelaCruda"
+                "title": "Crude Cloth Details"
             },
-            "peso": "Peso",
-            "ancho": "Ancho",
-            "costo": "Costo",
-            "fechaProduccion": "FechaProduccion",
-            "horaInicial": "HoraInicial",
-            "horaFinal": "HoraFinal",
-            "turno": "Turno",
-            "gramaje": "Gramaje",
-            "inicioParoMecanico": "InicioParoMecanico",
-            "finParoMecanico": "FinParoMecanico",
-            "paroMecanico": "Paro Mecanico",
-            "motivoParoMecanico": "MotivoParoMecanico",
+            "peso": "Height",
+            "ancho": "Width",
+            "costo": "Cost",
+            "fechaProduccion": "Production Date",
+            "horaInicial": "Initial Hour",
+            "horaFinal": "Final Hour",
+            "turno": "Turn",
+            "gramaje": "heavy weight",
+            "inicioParoMecanico": "Beginning Mechanical Fail",
+            "finParoMecanico": "End Mechanical Fail",
+            "paroMecanico": "Mechanical Fail",
+            "motivoParoMecanico": "Mechanical Fail Cause",
             "fibrasTelaCruda": "Fiber Crude cloth",
             "tipoTela": "Cloth Type",
             "maquina": "Machine",

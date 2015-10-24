@@ -83,7 +83,7 @@ angular.module('importcolexApp')
                         size: 'lg',
                         resolve: {
                             entity: function () {
-                                return {telaCrudaId:$stateParams.id, referencia: null, peso: null, id: null};
+                                return {telaCrudaId:$stateParams.id, referencia: null, peso: null, id: null, cantidadUsada: null};
                             }
                         }
                     }).result.then(function(result) {

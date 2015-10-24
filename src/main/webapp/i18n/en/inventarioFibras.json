@@ -2,25 +2,25 @@
     "importcolexApp": {
         "inventarioFibras" : {
             "home": {
-                "title": "InventarioFibrass",
-                "createLabel": "Create a new InventarioFibras",
-                "createOrEditLabel": "Create or edit a InventarioFibras"
+                "title": "Fiber inventory Manager",
+                "createLabel": "Create a new Fiber inventory",
+                "createOrEditLabel": "Create or edit a Fiber inventory"
             },
-            "created": "A new InventarioFibras is created with identifier {{ param }}",
-            "updated": "A InventarioFibras is updated with identifier {{ param }}",
-            "deleted": "A InventarioFibras is deleted with identifier {{ param }}",
+            "created": "A new Fiber inventory is created with identifier {{ param }}",
+            "updated": "A Fiber inventory is updated with identifier {{ param }}",
+            "deleted": "A Fiber inventory is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete InventarioFibras {{ id }}?"
+                "question": "Are you sure you want to delete Fiber inventory {{ id }}?"
             },
             "detail": {
-                "title": "InventarioFibras"
+                "title": "Fiber inventory"
             },
             "lote": "Lote",
-            "inventarioInicial": "InventarioInicial",
-            "inventarioFinal": "InventarioFinal",
-            "costo": "Costo",
-            "fibras": "Fibras",
-            "fibrasTelaCruda": "FibrasTelaCruda",
+            "inventarioInicial": "Initial Fiber inventory",
+            "inventarioFinal": "Final Fiber inventory",
+            "costo": "Cost",
+            "fibras": "Fibers",
+            "fibrasTelaCruda": "Cloth Crude Fibers",
             "ordenCompra": "pruchase Order"
         }
     }

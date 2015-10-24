@@ -2,21 +2,21 @@
     "importcolexApp": {
         "direccionamientoTela" : {
             "home": {
-                "title": "DireccionamientoTelas",
-                "createLabel": "Create a new DireccionamientoTela",
-                "createOrEditLabel": "Create or edit a DireccionamientoTela"
+                "title": "Cloths Pointer administration",
+                "createLabel": "Create a new Cloths Pointer",
+                "createOrEditLabel": "Create or edit a Cloths Pointer"
             },
-            "created": "A new DireccionamientoTela is created with identifier {{ param }}",
-            "updated": "A DireccionamientoTela is updated with identifier {{ param }}",
-            "deleted": "A DireccionamientoTela is deleted with identifier {{ param }}",
+            "created": "A new Cloths Pointer is created with identifier {{ param }}",
+            "updated": "A Cloths Pointer is updated with identifier {{ param }}",
+            "deleted": "A Cloths Pointer is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete DireccionamientoTela {{ id }}?"
+                "question": "Are you sure you want to delete Cloths Pointer {{ id }}?"
             },
             "detail": {
-                "title": "DireccionamientoTela"
+                "title": "Cloths Pointer Detail"
             },
-            "nombre": "Nombre",
-            "tipoTela": "TipoTela"
+            "nombre": "name",
+            "tipoTela": "cloth Type"
         }
     }
 }

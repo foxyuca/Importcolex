@@ -2,8 +2,8 @@
     "importcolexApp": {
         "fibrasTelaCruda" : {
             "home": {
-                "title": "FibrasTelaCrudas",
-                "createLabel": "Create a new FibrasTelaCruda",
+                "title": "Asociar Fibras a tela cruda",
+                "createLabel": "nueva asociacion de Fibra a tela cruda",
                 "createOrEditLabel": "Create or edit a FibrasTelaCruda"
             },
             "created": "A new FibrasTelaCruda is created with identifier {{ param }}",
@@ -13,12 +13,13 @@
                 "question": "Are you sure you want to delete FibrasTelaCruda {{ id }}?"
             },
             "detail": {
-                "title": "FibrasTelaCruda"
+                "title": "Asociar Fibras a tela cruda"
             },
             "referencia": "Referencia",
             "peso": "Peso",
             "inventarioFibras": "InventarioFibras",
-            "telaCruda": "TelaCruda"
+            "telaCruda": "TelaCruda",
+            "cantidadUsada": "Cantidad inv usada"
         }
     }
 }
